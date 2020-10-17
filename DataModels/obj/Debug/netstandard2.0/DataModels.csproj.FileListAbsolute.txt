@@ -1,0 +1,9 @@
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
