@@ -1,4 +1,4 @@
-name: ReviewOfReviews 
+name: AssistPurchase
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: ReviewOfReviews.sln    
+      Solution_Name: AssistPurchase.sln    
 
     steps:
     - name: Checkout
@@ -39,9 +39,6 @@ jobs:
     - name:  Run tests
       run: dotnet test --no-build --configuration Release
       
-    - name:  Pipe Sender output to receiver
-      run: Sender\bin\Release\netcoreapp3.0\Sender.exe | Receiver\bin\Release\netcoreapp3.0\Receiver.exe
-      
     - name: Commit output files
       run: |
         git config --local user.email "action@github.com"
@@ -58,10 +55,10 @@ jobs:
       run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
         
     - name:  Run resharper code inspection
-      run: jb inspectcode ReviewOfReviews.sln /output=insreport.xml
+      run: jb inspectcode AssistPurchase.sln /output=insreport.xml
     
     - name:  Run resharper duplicate code check
-      run: jb dupfinder ReviewOfReviews.sln /output=dupreport.xml
+      run: jb dupfinder AssistPurchase.sln /output=dupreport.xml
       
     - name: Check reports
       run: powershell ./resharper.ps1
