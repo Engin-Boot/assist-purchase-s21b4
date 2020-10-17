@@ -5,7 +5,7 @@ namespace Backend.Repository
 {
     public class DeviceRepository : IDeviceRepository
     {
-        private readonly string _csvFilePath = @"E:\BootCamp\assistPurchase\AssistPurchase\Backend\Devices.csv";
+        private readonly string _csvFilePath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv";
         readonly Utility.CsvInputHandler _csvHandler = new Utility.CsvInputHandler();
         public List<DataModels.DeviceModel> GetAllDevices()
         {
