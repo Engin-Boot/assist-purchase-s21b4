@@ -20,7 +20,4 @@ jobs:
         run: dotnet test --collect:"XPlat Code Coverage"
       
       - name: Check Sender Coverage
-        run: powershell ./SenderCoverage.ps1 -linerate 1
-       
-      - name: Check Receiver Coverage
-        run: powershell ./ReceiverCoverage.ps1 -linerate 1
+        run: powershell ./Coverage.ps1 -linerate 1
