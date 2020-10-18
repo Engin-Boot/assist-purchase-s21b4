@@ -38,9 +38,6 @@ namespace Backend.Repository
                     _csvHandler.WriteToFile(device, _csvFilePath);
                 }
             }
-
-
-
         }
     }
 }
