@@ -1,33 +1,36 @@
-﻿using Backend.Repository;
+﻿using RestSharp;
+using Xunit;
 using System.Collections.Generic;
 using System.Linq;
-using Xunit;
+using RestSharp.Serialization.Json;
+
 namespace BackendControllersTests
 {
-    public class DeviceFiltersRepositoryTests
+    public class DeviceFiltersControllerTests
     {
         [Fact]
-        public void TestExpectingListOfDevicesThatQualifyTheGivenFiltersPassedAsList()
+        public void TestExpectingListOfFilteredDevicesWhenCalledWithListOfFilters()
         {
-            //filters have to be in order - Weight, Resoulution, Measurements, BatteryCapacity
-            DeviceFiltersRepository deviceFilters = new DeviceFiltersRepository();
-            List<DataModels.DeviceModel> filtered = deviceFilters.ApplyAllFilters(new List<string> { "1.8", "1920 x 1080", "SPO2", "7" });
-            Assert.Equal("VUEMX750", filtered[0].Id);
-            Assert.Equal("VUEMX500", filtered[1].Id);
+            RestClient client = new RestClient("http://localhost:5000/api/filters");
+            string jsonData = "1.8,1920 x 1080,ECG,7";
+            RestRequest request = new RestRequest("/" + jsonData, Method.GET);
+            IRestResponse response = client.Execute(request);
+
+            var deserializer = new JsonDeserializer();
+            var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
+            Assert.Equal("VUEMX750", data[0].Id);
+            Assert.Equal("VUEMX500", data[1].Id);
         }
         [Fact]
-        public void TestExpectingEmptyListWhenNoDeviceQualifiesTheFilters()
+        public void TestExpectingEmptyListWhenInputStringIsInvalid()
         {
-            DeviceFiltersRepository deviceFilters = new DeviceFiltersRepository();
-            List<DataModels.DeviceModel> filtered = deviceFilters.ApplyAllFilters(new List<string> { "1.8", "1920 x 1080", "SPO2", "9" });
-            Assert.False(filtered.Any());
-        }
-        [Fact]
-        public void TestExpectingEmptyListWhenTheFiltersAreNotInCorrectFormat()
-        {
-            DeviceFiltersRepository deviceFilters = new DeviceFiltersRepository();
-            List<DataModels.DeviceModel> filtered = deviceFilters.ApplyAllFilters(new List<string> { "fan", "1920 x 1080", "SPO2", "9" });
-            Assert.False(filtered.Any());
+            RestClient client = new RestClient("http://localhost:5000/api/filters");
+            string jsonData = "1.8,1920 x 1080,ECG,12";
+            RestRequest request = new RestRequest("/" + jsonData, Method.GET);
+            IRestResponse response = client.Execute(request);
+            var deserializer = new JsonDeserializer();
+            var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
+            Assert.False(data.Any());
         }
     }
 }
