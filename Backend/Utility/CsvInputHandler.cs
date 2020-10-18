@@ -17,24 +17,8 @@ namespace Backend.Utility
             List<string> devices = new List<string>();
             try
             {
-
-                using (var reader = new StreamReader(filepath))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        lineCounter++;
-                        var values = line.Split(',');
-                        if (string.Compare(id, values[0]) != 0)
-                        {
-                            devices.Add(line);
-
-                        }
-                    }
-                    isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
-
-                }
-                WriteLineToFile(devices,filepath);
+                isDeleted = ReadLinesFromFile(id,devices, lineCounter, isDeleted, filepath);
+                WriteLinesToFile(devices,filepath);
                 
             }
             catch (Exception e)
@@ -45,7 +29,28 @@ namespace Backend.Utility
             return isDeleted;
 
         }
-        private void WriteLineToFile(List<string> devices,string filepath)
+        private bool ReadLinesFromFile(string id,List<string> devices, int lineCounter,bool isDeleted, string filepath)
+        {
+            using (var reader = new StreamReader(filepath))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    lineCounter++;
+                    var values = line.Split(',');
+                    if (string.Compare(id, values[0]) != 0)
+                    {
+                        devices.Add(line);
+
+                    }
+                }
+                isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
+
+            }
+            return isDeleted;
+        }
+       
+        private void WriteLinesToFile(List<string> devices,string filepath)
         {
             using var writer = new StreamWriter(filepath);
             foreach (var writeline in devices)
