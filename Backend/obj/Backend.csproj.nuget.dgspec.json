@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\Backend.csproj": {}
+    "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\Backend.csproj": {
+    "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\Backend.csproj",
+        "projectUniqueName": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\Backend.csproj",
+        "projectPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\TOSHIBA\\.nuget\\packages\\",
-        "outputPath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\obj\\",
+        "outputPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TOSHIBA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj": {
-                "projectPath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj"
+              "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {
+                "projectPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj": {
+    "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj",
+        "projectUniqueName": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
         "projectName": "DataModels",
-        "projectPath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj",
+        "projectPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
         "packagesPath": "C:\\Users\\TOSHIBA\\.nuget\\packages\\",
-        "outputPath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\obj\\",
+        "outputPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TOSHIBA\\AppData\\Roaming\\NuGet\\NuGet.Config",

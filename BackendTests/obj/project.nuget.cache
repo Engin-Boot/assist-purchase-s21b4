@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wcvMuJgouHZylAE0XNdvqDg0BwT4yhemFXI/ZLrQrOZfsC1k307ffO9b+KC1JfZlsBsPIEPnq9V1MtKpmdziHg==",
+  "dgSpecHash": "/wjj9g1UT9+0LoX/wpq4dtz/hxx8bubFTdK5qNUg9kJfRDAtatdbTX2LRraAW9PR94pSV1ULiy6ZG4aahtLUsw==",
   "success": true,
-  "projectFilePath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\BackendTests\\BackendTests.csproj",
+  "projectFilePath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\BackendTests\\BackendTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

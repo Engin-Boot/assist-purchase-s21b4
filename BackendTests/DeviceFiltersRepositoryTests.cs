@@ -26,7 +26,7 @@ namespace BackendTests
         public void TestExpectingEmptyListWhenTheFiltersAreNotInCorrectFormat()
         {
             DeviceFiltersRepository deviceFilters = new DeviceFiltersRepository();
-            List<DataModels.DeviceModel> filtered = deviceFilters.ApplyAllFilters(new List<string> { "1.8", "1920 x 1080", "SPO2", "9" });
+            List<DataModels.DeviceModel> filtered = deviceFilters.ApplyAllFilters(new List<string> { "fan", "1920 x 1080", "SPO2", "9" });
             Assert.False(filtered.Any());
         }
     }

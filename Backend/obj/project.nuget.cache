@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qSvZPIAvkGDfg1N07WG8ckNDNA6U717DnAfFbI4LS/OLO0JKAwwlgx2c6Rj0Ozf4ofhnWbpM9DuWa+GrvOr9/w==",
+  "dgSpecHash": "tw3NeKJHZZfZcXP4Pajor5lcTD5MBMe8Eph2BvlH4P0NDoBcPvh7024F7co+b9a9XLFxpPdt25ifERgSaI6DiA==",
   "success": true,
-  "projectFilePath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\Backend\\Backend.csproj",
+  "projectFilePath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\Backend\\Backend.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

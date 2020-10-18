@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2JL3us1EEsg0hywD1gnUD0EjqPEbwUL/CruQonhJIuQDXg47hocxqRiYWerTHw960zvOYREjfOef4bKgPZWGLA==",
+  "dgSpecHash": "bhDR3P8QV1NVubpZR+s1klYn5QMJVPmtPSci+mz9XneuGepA0wvgIRuebqTYzJSfGAE3PvCJTp5JnBjHNXSaFQ==",
   "success": true,
-  "projectFilePath": "E:\\BootCamp\\assistPurchase\\AssistPurchase\\DataModels\\DataModels.csproj",
+  "projectFilePath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
