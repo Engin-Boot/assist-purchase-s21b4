@@ -1,15 +1,15 @@
-﻿using RestSharp;
+using RestSharp;
 using RestSharp.Serialization;
 using RestSharp.Serialization.Json;
 using System.Collections.Generic;
 using System.Net;
 using Xunit;
 
-namespace BackendTests
+namespace BackendControllersTests
 {
     public class DeviceControllerTests
     {
-        
+
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
         {
@@ -21,7 +21,7 @@ namespace BackendTests
             Assert.True(response.StatusCode == (HttpStatusCode.OK));
             Assert.True(response.ContentType.Equals(ContentType.Json + "; charset=utf-8"));
             Assert.True(data[0].Name == "IntelliVue MX750");
-            
+
         }
         [Fact]
         public void TextExpectingDeviceToBeAddedWhenCalledWithDeviceModelObject()
@@ -48,7 +48,7 @@ namespace BackendTests
             {
                 Assert.True(response.StatusCode == HttpStatusCode.OK);
             }
-            
+
             httpPostReq.Abort();
             response.Dispose();
 
@@ -72,7 +72,7 @@ namespace BackendTests
         [Fact]
         public void TestExpectingDeviceToBeRemovedWhenCalledWithStringId()
         {
-            
+
             HttpWebRequest httpDeleteReq = WebRequest.CreateHttp("http://localhost:5000/api/devices/VUEMX300");
             httpDeleteReq.Method = "DELETE";
             httpDeleteReq.ContentType = "application/json";
@@ -91,7 +91,7 @@ namespace BackendTests
                 Name = "IntelliVue X3",
                 Id = "VUEX3",
                 BatteryCapacity = "7",
-                Measurements = new List<string> { "ECG", "SPO2","Respiration" },
+                Measurements = new List<string> { "ECG", "SPO2", "Respiration" },
                 Overview = "The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.",
                 Resolution = "1024 x 420",
                 Weight = 1.9f,
@@ -104,9 +104,10 @@ namespace BackendTests
             System.Runtime.Serialization.Json.DataContractJsonSerializer deviceDataJsonSerializer =
                 new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
             deviceDataJsonSerializer.WriteObject(httpPutReq.GetRequestStream(), device);
-           HttpWebResponse response = httpPutReq.GetResponse() as HttpWebResponse;
+            HttpWebResponse response = httpPutReq.GetResponse() as HttpWebResponse;
             Assert.True(response.StatusCode == HttpStatusCode.OK);
             httpPutReq.Abort();
         }
+
     }
 }
