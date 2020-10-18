@@ -6,7 +6,7 @@ namespace BackendTests
 {
     public class DeviceRepositoryTests
     {
-        readonly DeviceRepository deviceRepository = new DeviceRepository();
+        readonly DeviceRepository _deviceRepository = new DeviceRepository();
         readonly DataModels.DeviceModel device = new DataModels.DeviceModel
         {
             Name = "IntelliVue MX300",
@@ -20,13 +20,13 @@ namespace BackendTests
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
         {
-            List<DataModels.DeviceModel> alldevices = deviceRepository.GetAllDevices();
+            List<DataModels.DeviceModel> alldevices = _deviceRepository.GetAllDevices();
             Assert.Equal("IntelliVue MX750", alldevices[0].Name);
         }
         [Fact]
         public void TestExpectingADeviceWhenCalledWithStringId()
         {
-            DataModels.DeviceModel tempDevice = deviceRepository.GetDevice("VUEMX750");
+            DataModels.DeviceModel tempDevice = _deviceRepository.GetDevice("VUEMX750");
             Assert.Equal("IntelliVue MX750", tempDevice.Name);
             
         }
@@ -34,28 +34,28 @@ namespace BackendTests
         public void TestExpectingDeviceToBeAddedIntoListWhenCalledWithNewProduct()
         {
            
-            deviceRepository.AddNewDevice(device);
-            List<DataModels.DeviceModel> devices = deviceRepository.GetAllDevices();
+            _deviceRepository.AddNewDevice(device);
+            List<DataModels.DeviceModel> devices = _deviceRepository.GetAllDevices();
             Assert.Equal("IntelliVue MX300",devices[^1].Name);
-            deviceRepository.DeleteDevice(device.Id);
+            _deviceRepository.DeleteDevice(device.Id);
 
         }
         [Fact]
         public void TestExpectingDeviceToBeRemovedFromTheListWhenCalledWithStringId()
         {
             
-            deviceRepository.AddNewDevice(device);
-            Assert.True(deviceRepository.DeleteDevice(device.Id));
-            Assert.Null(deviceRepository.GetDevice(device.Id));
+            _deviceRepository.AddNewDevice(device);
+            Assert.True(_deviceRepository.DeleteDevice(device.Id));
+            Assert.Null(_deviceRepository.GetDevice(device.Id));
         }
 
         [Fact]
         public void TestExpectingDeviceToBeUpdatedFromTheListWhenCalledWithStringId()
         {
-            DataModels.DeviceModel device = deviceRepository.GetDevice("VUEX3");
-            device.BatteryCapacity = "10";
-            deviceRepository.UpdateDevice("VUEX3",device);
-            Assert.Equal("10", deviceRepository.GetDevice("VUEX3").BatteryCapacity);
+            DataModels.DeviceModel tempDevice = _deviceRepository.GetDevice("VUEX3");
+            tempDevice.BatteryCapacity = "10";
+            _deviceRepository.UpdateDevice("VUEX3",tempDevice);
+            Assert.Equal("10", _deviceRepository.GetDevice("VUEX3").BatteryCapacity);
         }
     }
 }
