@@ -6,8 +6,8 @@ namespace BackendTests
 {
     public class DeviceRepositoryTests
     {
-        DeviceRepository deviceRepository = new DeviceRepository();
-        DataModels.DeviceModel device = new DataModels.DeviceModel
+        readonly DeviceRepository deviceRepository = new DeviceRepository();
+        readonly DataModels.DeviceModel device = new DataModels.DeviceModel
         {
             Name = "IntelliVue MX300",
             Id = "VUEMX300",
@@ -26,8 +26,8 @@ namespace BackendTests
         [Fact]
         public void TestExpectingADeviceWhenCalledWithStringId()
         {
-            DataModels.DeviceModel device = deviceRepository.GetDevice("VUEMX750");
-            Assert.Equal("IntelliVue MX750", device.Name);
+            DataModels.DeviceModel tempDevice = deviceRepository.GetDevice("VUEMX750");
+            Assert.Equal("IntelliVue MX750", tempDevice.Name);
             
         }
         [Fact]

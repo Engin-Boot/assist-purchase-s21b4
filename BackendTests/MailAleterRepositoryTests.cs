@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using Xunit;
 using DataModels;
 using Backend.Repository;
-using System.Security.Cryptography;
 
 namespace BackendTests
 {
     public class MailAleterRepositoryTests
     {
-        MailAlerterRepository _mailAlerterRepository = new MailAlerterRepository();
+        readonly MailAlerterRepository _mailAlerterRepository = new MailAlerterRepository();
         [Fact]
         public void TestExpectingCustomerToBeAddedIfItDoesnotExist()
         {
