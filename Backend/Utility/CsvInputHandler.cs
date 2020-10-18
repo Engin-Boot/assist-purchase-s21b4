@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,12 +34,7 @@ namespace Backend.Utility
                     isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
 
                 }
-                using var writer = new StreamWriter(filepath);
-                foreach (var writeline in devices)
-                {
-                    writer.WriteLine(writeline);
-
-                }
+                WriteLineToFile(devices,filepath);
                 
             }
             catch (Exception e)
@@ -49,6 +45,15 @@ namespace Backend.Utility
             return isDeleted;
 
         }
+        private void WriteLineToFile(List<string> devices,string filepath)
+        {
+            using var writer = new StreamWriter(filepath);
+            foreach (var writeline in devices)
+            {
+                writer.WriteLine(writeline);
+
+            }
+        }
 
         public List<DataModels.DeviceModel> ReadFile(string filepath)
         {
@@ -57,15 +62,8 @@ namespace Backend.Utility
             {
                 if (File.Exists(filepath))
                 {
-                    using var reader = new StreamReader(filepath);
-                    reader.ReadLine();
-                    while (!reader.EndOfStream)
-                    {
-                        var line = reader.ReadLine();
-                        var values = line.Split(',');
-                        DataModels.DeviceModel device = FormatStringToObject(values);
-                        devices.Add(device);
-                    }
+                   
+                    devices = WriteObjectsToList(devices, filepath);
                 }
             }
             catch (Exception e)
@@ -74,19 +72,26 @@ namespace Backend.Utility
             }
             return devices;
         }
+        private List<DataModels.DeviceModel> WriteObjectsToList(List<DataModels.DeviceModel> devices,string filepath)
+        {
+            using var reader = new StreamReader(filepath);
+            reader.ReadLine();
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                var values = line.Split(',');
+                DataModels.DeviceModel device = FormatStringToObject(values);
+                devices.Add(device);
+            }
+            return devices;
+        }
 
-        public bool WriteToFile(DataModels.DeviceModel data, string filepath)
+        public bool WriteToFile(DeviceModel data, string filepath)
         {
             bool isWritten = false;
             try
             {
-                string csvData = FormatObjectDataToString(data);
-                if (File.Exists(filepath) && csvData != null)
-                {
-                    File.AppendAllText(filepath, csvData + '\n');
-                    isWritten = true;
-                }
-               
+                isWritten = AppendTextToFile(data,filepath);
                
             }
             catch (Exception e)
@@ -97,7 +102,18 @@ namespace Backend.Utility
             return isWritten;
         }
 
-        private string FormatObjectDataToString(DataModels.DeviceModel device)
+        private bool AppendTextToFile(DeviceModel data,string filepath)
+        {
+            bool isWritten = false;
+            string csvData = FormatObjectDataToString(data);
+            if (File.Exists(filepath) && csvData != null)
+            {
+                File.AppendAllText(filepath, csvData + '\n');
+                isWritten = true;
+            }
+            return isWritten;
+        }
+        private string FormatObjectDataToString(DeviceModel device)
         {
             string csvFormatData = null;
             try

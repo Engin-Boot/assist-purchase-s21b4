@@ -22,7 +22,7 @@ namespace Backend.Repository
             try
             {
                 parsedValue = float.Parse(filterValue);
-                if(filter1!=null && !string.IsNullOrEmpty(filterValue))
+                if(!string.IsNullOrEmpty(filterValue))
                 {
                     return filter1.FindAll(device => device.Weight == parsedValue);
                 }
