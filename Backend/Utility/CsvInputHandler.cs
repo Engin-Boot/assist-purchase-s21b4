@@ -1,9 +1,10 @@
 ﻿using DataModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
-
+using System.Windows.Markup;
 
 namespace Backend.Utility
 {
@@ -32,22 +33,20 @@ namespace Backend.Utility
         {
             int lineCounter = 0;
             bool isDeleted;
-            using (var reader = new StreamReader(filepath))
+            using var reader = new StreamReader(filepath);
+            string line;
+            while ((line = reader.ReadLine()) != null)
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                lineCounter++;
+                var values = line.Split(',');
+                if (string.Compare(id, values[0], true, CultureInfo.CurrentCulture) != 0)
                 {
-                    lineCounter++;
-                    var values = line.Split(',');
-                    if (string.Compare(id, values[0]) != 0)
-                    {
-                        devices.Add(line);
+                    devices.Add(line);
 
-                    }
                 }
-                isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
-
             }
+            isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
+
             return isDeleted;
         }
        
@@ -85,9 +84,14 @@ namespace Backend.Utility
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                var values = line.Split(',');
-                DeviceModel device = FormatStringToObject(values);
-                devices.Add(device);
+                if (line != null)
+                {
+                    var values = line.Split(',');
+                    DeviceModel device = FormatStringToObject(values);
+                    devices.Add(device);
+                }
+                
+
             }
             return devices;
         }
@@ -131,7 +135,7 @@ namespace Backend.Utility
                     device.Name,
                     device.Overview,
                     string.Join(' ',device.Measurements),
-                    device.Weight.ToString(),
+                    device.Weight.ToString(CultureInfo.CurrentCulture),
                     device.BatteryCapacity,
                     device.Resolution,
                     });

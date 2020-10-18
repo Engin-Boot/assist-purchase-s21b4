@@ -7,7 +7,7 @@ namespace BackendTests
     public class DeviceRepositoryTests
     {
         readonly DeviceRepository _deviceRepository = new DeviceRepository();
-        readonly DataModels.DeviceModel device = new DataModels.DeviceModel
+        readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
             Name = "IntelliVue MX300",
             Id = "VUEMX300",
@@ -34,19 +34,19 @@ namespace BackendTests
         public void TestExpectingDeviceToBeAddedIntoListWhenCalledWithNewProduct()
         {
            
-            _deviceRepository.AddNewDevice(device);
+            _deviceRepository.AddNewDevice(_device);
             List<DataModels.DeviceModel> devices = _deviceRepository.GetAllDevices();
             Assert.Equal("IntelliVue MX300",devices[^1].Name);
-            _deviceRepository.DeleteDevice(device.Id);
+            _deviceRepository.DeleteDevice(_device.Id);
 
         }
         [Fact]
         public void TestExpectingDeviceToBeRemovedFromTheListWhenCalledWithStringId()
         {
             
-            _deviceRepository.AddNewDevice(device);
-            Assert.True(_deviceRepository.DeleteDevice(device.Id));
-            Assert.Null(_deviceRepository.GetDevice(device.Id));
+            _deviceRepository.AddNewDevice(_device);
+            Assert.True(_deviceRepository.DeleteDevice(_device.Id));
+            Assert.Null(_deviceRepository.GetDevice(_device.Id));
         }
 
         [Fact]

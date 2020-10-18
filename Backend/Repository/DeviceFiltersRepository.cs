@@ -24,7 +24,7 @@ namespace Backend.Repository
                 parsedValue = float.Parse(filterValue);
                 if(!string.IsNullOrEmpty(filterValue))
                 {
-                    return filter1.FindAll(device => device.Weight == parsedValue);
+                    return filter1.FindAll(device => (device.Weight - parsedValue) < 0.0000001);
                 }
                     
             }

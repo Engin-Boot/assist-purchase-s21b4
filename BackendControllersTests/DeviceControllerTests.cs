@@ -77,7 +77,8 @@ namespace BackendControllersTests
             httpDeleteReq.Method = "DELETE";
             httpDeleteReq.ContentType = "application/json";
             HttpWebResponse response = httpDeleteReq.GetResponse() as HttpWebResponse;
-            Assert.True(response.StatusCode == HttpStatusCode.OK);
+            if(response!=null)
+                 Assert.True(response.StatusCode == HttpStatusCode.OK);
             response.Dispose();
             httpDeleteReq.Abort();
         }
@@ -105,7 +106,8 @@ namespace BackendControllersTests
                 new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
             deviceDataJsonSerializer.WriteObject(httpPutReq.GetRequestStream(), device);
             HttpWebResponse response = httpPutReq.GetResponse() as HttpWebResponse;
-            Assert.True(response.StatusCode == HttpStatusCode.OK);
+            if(response!=null)
+                 Assert.True(response.StatusCode == HttpStatusCode.OK);
             httpPutReq.Abort();
         }
 
