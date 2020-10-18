@@ -75,19 +75,19 @@
             },
             "xunit.assert": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.0, )"
             },
             "xunit.core": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.0, )"
             },
             "xunit.extensibility.core": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.0, )"
             },
             "xunit.extensibility.execution": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.0, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
