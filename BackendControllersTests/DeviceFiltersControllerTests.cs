@@ -20,16 +20,11 @@ namespace BackendControllersTests
             var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
             Assert.Equal("VUEMX750", data[0].Id);
             Assert.Equal("VUEMX500", data[1].Id);
-        }
-        [Fact]
-        public void TestExpectingEmptyListWhenInputStringIsInvalid()
-        {
-            RestClient client = new RestClient("http://localhost:5000/api/filters");
-            string jsonData = "1.8,1920 x 1080,ECG,12";
-            RestRequest request = new RestRequest("/" + jsonData, Method.GET);
-            IRestResponse response = client.Execute(request);
-            var deserializer = new JsonDeserializer();
-            var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
+
+            jsonData = "1.8,1920 x 1080,ECG,12";
+            request = new RestRequest("/" + jsonData, Method.GET);
+            response = client.Execute(request);
+            data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
             Assert.False(data.Any());
         }
     }
