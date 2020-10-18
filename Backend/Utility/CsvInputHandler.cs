@@ -13,11 +13,10 @@ namespace Backend.Utility
         {
             bool isDeleted = false;
             
-            int lineCounter = 0;
             List<string> devices = new List<string>();
             try
             {
-                isDeleted = ReadLinesFromFile(id,devices, lineCounter, isDeleted, filepath);
+                isDeleted = ReadLinesFromFile(id,devices, filepath);
                 WriteLinesToFile(devices,filepath);
                 
             }
@@ -29,8 +28,10 @@ namespace Backend.Utility
             return isDeleted;
 
         }
-        private bool ReadLinesFromFile(string id,List<string> devices, int lineCounter,bool isDeleted, string filepath)
+        private bool ReadLinesFromFile(string id,List<string> devices, string filepath)
         {
+            int lineCounter = 0;
+            bool isDeleted;
             using (var reader = new StreamReader(filepath))
             {
                 string line;
