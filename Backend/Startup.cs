@@ -22,6 +22,7 @@ namespace Backend
             services.AddControllers();
             services.AddSingleton<IDeviceRepository, DeviceRepository>();
             services.AddSingleton<IDeviceFiltersRepository, DeviceFiltersRepository>();
+            services.AddSingleton<IMailAlerterRepository, MailAlerterRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

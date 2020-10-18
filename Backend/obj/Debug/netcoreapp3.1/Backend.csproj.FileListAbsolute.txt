@@ -35,8 +35,6 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\Data
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.csprojAssemblyReference.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.AssemblyInfoInputs.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.AssemblyInfo.cs
-E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
-E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.RazorTargetAssemblyInfo.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CopyComplete
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\staticwebassets\Backend.StaticWebAssets.Manifest.cache
@@ -44,3 +42,11 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\stat
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
 E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\Backend\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache

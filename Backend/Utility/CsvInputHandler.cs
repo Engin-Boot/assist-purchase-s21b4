@@ -60,9 +60,9 @@ namespace Backend.Utility
             }
         }
 
-        public List<DataModels.DeviceModel> ReadFile(string filepath)
+        public List<DeviceModel> ReadFile(string filepath)
         {
-            List<DataModels.DeviceModel> devices = new List<DataModels.DeviceModel>();
+            List<DeviceModel> devices = new List<DeviceModel>();
             try
             {
                 if (File.Exists(filepath))
@@ -77,7 +77,7 @@ namespace Backend.Utility
             }
             return devices;
         }
-        private List<DataModels.DeviceModel> WriteObjectsToList(List<DataModels.DeviceModel> devices,string filepath)
+        private List<DeviceModel> WriteObjectsToList(List<DeviceModel> devices,string filepath)
         {
             using var reader = new StreamReader(filepath);
             reader.ReadLine();
@@ -85,7 +85,7 @@ namespace Backend.Utility
             {
                 var line = reader.ReadLine();
                 var values = line.Split(',');
-                DataModels.DeviceModel device = FormatStringToObject(values);
+                DeviceModel device = FormatStringToObject(values);
                 devices.Add(device);
             }
             return devices;
@@ -93,7 +93,7 @@ namespace Backend.Utility
 
         public bool WriteToFile(DeviceModel data, string filepath)
         {
-            bool isWritten = false;
+            bool isWritten;
             try
             {
                 isWritten = AppendTextToFile(data,filepath);
@@ -146,15 +146,15 @@ namespace Backend.Utility
 
         }
 
-        private DataModels.DeviceModel FormatStringToObject(string[] values)
+        private DeviceModel FormatStringToObject(string[] values)
         {
-            DataModels.DeviceModel device = new DataModels.DeviceModel
+            DeviceModel device = new DeviceModel
             {
 
                 Id = values[0],
                 Name = values[1],
                 Overview = values[2],
-                Measurements = values[3].Split(' ').ToList<string>(),
+                Measurements = values[3].Split(' ').ToList(),
                 Weight = float.Parse(values[4]),
                 BatteryCapacity = values[5],
                 Resolution = values[6],

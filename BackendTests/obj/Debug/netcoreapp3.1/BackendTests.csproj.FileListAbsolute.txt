@@ -315,3 +315,9 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.pdb
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.genruntimeconfig.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
