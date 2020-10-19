@@ -1,6 +1,4 @@
 ﻿using DataModels;
-using MimeKit;
-using MimeKit.Text;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
