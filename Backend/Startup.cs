@@ -20,7 +20,6 @@ namespace Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddScoped<IDeviceRepository, DeviceRepository>();
             services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv"));
             services.AddScoped<IDeviceFiltersRepository, DeviceFiltersRepository>();
             services.AddSingleton<IMailAlerterRepository, MailAlerterRepository>();
