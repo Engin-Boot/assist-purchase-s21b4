@@ -55,5 +55,15 @@ namespace BackendTests
             };
             Assert.True(_controller.Update("VUEX3", device));
         }
+        [Fact]
+        public void TestExpectingFalseWhenIdOfTheObjectIsNullOrEmpty()
+        {
+            Assert.False(_controller.Update("", _device));
+        }
+        [Fact]
+        public void TestExpectingFalseWhenUpdatedStateOfTheDeviceIsPassedasNull()
+        {
+            Assert.False(_controller.Update("VUEMX3", null));
+        }
     }
 }

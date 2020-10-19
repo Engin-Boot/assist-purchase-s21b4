@@ -33,7 +33,7 @@ namespace Backend.Controllers
         [HttpPut("{id}")]
         public bool Update(string id, [FromBody] DataModels.DeviceModel updatedState)
         {
-            if (id != null&& updatedState!=null)
+            if (!string.IsNullOrEmpty(id) && updatedState!=null)
             {
                 return _repository.UpdateDevice(id, updatedState);
                 
