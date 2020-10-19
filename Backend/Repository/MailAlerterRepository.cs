@@ -1,10 +1,11 @@
 ﻿using DataModels;
-using MailKit.Security;
 using MimeKit;
 using MimeKit.Text;
-using MailKit.Net.Smtp;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
+
 
 namespace Backend.Repository
 {
@@ -35,6 +36,7 @@ namespace Backend.Repository
 
         public void SendEmail(CustomerModel customer)
         {
+
             var messageBody = new StringBuilder();
             messageBody.Append("Hello,\n");
             messageBody.Append("The following customer has booked the product.\n");
@@ -42,19 +44,29 @@ namespace Backend.Repository
             messageBody.Append("Customer Name: " + customer.CustomerName + "\n");
             messageBody.Append("Customer Phone Number: " + customer.CustomerPhoneNumber + "\n");
             messageBody.Append("Customer Email Id: " + customer.CustomerEmailId + "\n");
-            messageBody.Append("Customer Product Name: " + customer.DeviceId);
+            messageBody.Append("Device Id: " + customer.DeviceId);
 
-            var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(customer.CustomerEmailId));
-            email.To.Add(MailboxAddress.Parse("aleenasaleem.260199@gmail.com"));
-            email.Subject = "Customer Booking Received";
-            email.Body = new TextPart(TextFormat.Plain) { Text = messageBody.ToString() };
+            string fromaddr = "s21b4.assistpurchase@gmail.com";
+            string toaddr = "aleenasaleem.260199@gmail.com";//TO ADDRESS HERE
+            string password = "S21B4@casestudy2";
 
-            using var smtp = new SmtpClient();
-            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("[USERNAME]", "[PASSWORD]");
-            smtp.Send(email);
-            smtp.Disconnect(true);
+            MailMessage msg = new MailMessage();
+            msg.Subject = "Username &password";
+            msg.From = new MailAddress(fromaddr);
+            msg.Body = messageBody.ToString();
+            msg.To.Add(new MailAddress(toaddr));
+            SmtpClient smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                UseDefaultCredentials = false,
+                EnableSsl = true
+            };
+            NetworkCredential nc = new NetworkCredential(fromaddr, password);
+            smtp.Credentials = nc;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Send(msg);
+
         }
     }
 }

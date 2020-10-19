@@ -18,17 +18,17 @@ namespace Backend.Controllers
 
         // POST api/<CustomerAlertController>
         [HttpPost("alert")]
-        public IActionResult PostAlert([FromBody] CustomerModel customer)
+        public string PostAlert([FromBody] CustomerModel customer)
         {
             try
             {
                 _mailAlerterRespository.SendEmail(customer);
-                return Ok("mail sent");
+                return "Mail Sent";
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                return StatusCode(500);
+                return "Internal Server Error";
             }
         }
 

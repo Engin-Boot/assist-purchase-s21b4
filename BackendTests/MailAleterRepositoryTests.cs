@@ -41,5 +41,19 @@ namespace BackendTests
 
             Assert.Null(_mailAlerterRepository.FindCustomer(customer.CustomerId));
         }
+        [Fact]
+        public void TestExpectingMailSentWhenCalledWithCustomerBody()
+        {
+            CustomerModel customer = new CustomerModel()
+            {
+                CustomerId = "307",
+                CustomerName = "ElliotAlderson",
+                CustomerEmailId = "Elliot@example.com",
+                CustomerPhoneNumber = "1234567890",
+                DeviceId = "VUEMX750"
+            };
+
+            _mailAlerterRepository.SendEmail(customer);
+        }
     }
 }
