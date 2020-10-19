@@ -23,6 +23,7 @@ namespace Backend.Utility
             }
             catch (Exception e)
             {
+                Console.WriteLine("Delete from file: ",filepath);
                 Console.WriteLine(e.Message);
             }
             
@@ -73,6 +74,7 @@ namespace Backend.Utility
             }
             catch (Exception e)
             {
+                Console.WriteLine("ReadFile : ", filepath);
                 Console.WriteLine(e.Message);
             }
             return devices;
@@ -107,6 +109,7 @@ namespace Backend.Utility
             catch (Exception e)
             {
                 isWritten = false;
+                Console.WriteLine("WriteToFile: ", filepath);
                 Console.WriteLine(e.Message);
             }
             return isWritten;

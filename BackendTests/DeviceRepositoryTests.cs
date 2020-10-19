@@ -6,7 +6,8 @@ namespace BackendTests
 {
     public class DeviceRepositoryTests
     {
-        readonly DeviceRepository _deviceRepository = new DeviceRepository();
+        static readonly string filepath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\BackendTests\TestDevices.csv";
+        readonly DeviceRepository _deviceRepository = new DeviceRepository(filepath);
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
             Name = "IntelliVue MX300",

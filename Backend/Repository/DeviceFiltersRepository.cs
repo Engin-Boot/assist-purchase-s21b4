@@ -6,7 +6,8 @@ namespace Backend.Repository
 {
     public class DeviceFiltersRepository : IDeviceFiltersRepository
     {
-        readonly List<DataModels.DeviceModel> _filteredDevices = new DeviceRepository().GetAllDevices();
+        static readonly string filepath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv";
+        readonly List<DataModels.DeviceModel> _filteredDevices = new DeviceRepository(filepath).GetAllDevices();
         public List<DataModels.DeviceModel> ApplyAllFilters(List<string> filters)
         {
             var filter = ApplyWeightFilter(filters[0],_filteredDevices);
