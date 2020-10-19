@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Windows.Markup;
 
 namespace Backend.Utility
 {
@@ -23,7 +22,6 @@ namespace Backend.Utility
             }
             catch (Exception e)
             {
-                Console.WriteLine("Delete from file: ",filepath);
                 Console.WriteLine(e.Message);
             }
             
@@ -33,7 +31,7 @@ namespace Backend.Utility
         private bool ReadLinesFromFile(string id,List<string> devices, string filepath)
         {
             int lineCounter = 0;
-            bool isDeleted;
+           
             using var reader = new StreamReader(filepath);
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -46,7 +44,7 @@ namespace Backend.Utility
 
                 }
             }
-            isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
+            bool isDeleted = CompareDataListsAfterDelete(lineCounter, devices);
 
             return isDeleted;
         }
@@ -74,7 +72,6 @@ namespace Backend.Utility
             }
             catch (Exception e)
             {
-                Console.WriteLine("ReadFile : ", filepath);
                 Console.WriteLine(e.Message);
             }
             return devices;
@@ -109,7 +106,6 @@ namespace Backend.Utility
             catch (Exception e)
             {
                 isWritten = false;
-                Console.WriteLine("WriteToFile: ", filepath);
                 Console.WriteLine(e.Message);
             }
             return isWritten;

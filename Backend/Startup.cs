@@ -14,14 +14,14 @@ namespace Backend
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
             //services.AddScoped<IDeviceRepository, DeviceRepository>();
-            services.AddScoped<IDeviceRepository>(DeviceRepository => new DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv"));
+            services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv"));
             services.AddScoped<IDeviceFiltersRepository, DeviceFiltersRepository>();
             services.AddSingleton<IMailAlerterRepository, MailAlerterRepository>();
         }

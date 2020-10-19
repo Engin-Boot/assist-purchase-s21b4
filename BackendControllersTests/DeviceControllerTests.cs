@@ -43,14 +43,8 @@ namespace BackendControllersTests
             System.Runtime.Serialization.Json.DataContractJsonSerializer deviceDataJsonSerializer =
                 new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
             deviceDataJsonSerializer.WriteObject(httpPostReq.GetRequestStream(), device);
-            HttpWebResponse response = httpPostReq.GetResponse() as HttpWebResponse;
-            if (response != null)
-            {
+            if (httpPostReq.GetResponse() is HttpWebResponse response)
                 Assert.True(response.StatusCode == HttpStatusCode.OK);
-            }
-
-            httpPostReq.Abort();
-            response.Dispose();
 
             var id = device.Id;
             RestClient client = new RestClient("http://localhost:5000/api/devices");
@@ -76,17 +70,14 @@ namespace BackendControllersTests
             HttpWebRequest httpDeleteReq = WebRequest.CreateHttp("http://localhost:5000/api/devices/VUEMX300");
             httpDeleteReq.Method = "DELETE";
             httpDeleteReq.ContentType = "application/json";
-            HttpWebResponse response = httpDeleteReq.GetResponse() as HttpWebResponse;
-            if(response!=null)
-                 Assert.True(response.StatusCode == HttpStatusCode.OK);
-            response.Dispose();
-            httpDeleteReq.Abort();
+           if (httpDeleteReq.GetResponse() is HttpWebResponse response)
+                Assert.True(response.StatusCode == HttpStatusCode.OK);
+
         }
 
         [Fact]
         public void TestExpectingDeviceToBeUpdatedWhenCalledWithStirngIdAndUpdatedDeviceState()
         {
-
             DataModels.DeviceModel device = new DataModels.DeviceModel
             {
                 Name = "IntelliVue X3",
@@ -105,9 +96,8 @@ namespace BackendControllersTests
             System.Runtime.Serialization.Json.DataContractJsonSerializer deviceDataJsonSerializer =
                 new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
             deviceDataJsonSerializer.WriteObject(httpPutReq.GetRequestStream(), device);
-            HttpWebResponse response = httpPutReq.GetResponse() as HttpWebResponse;
-            if(response!=null)
-                 Assert.True(response.StatusCode == HttpStatusCode.OK);
+            if (httpPutReq.GetResponse() is HttpWebResponse response)
+                Assert.True(response.StatusCode == HttpStatusCode.OK);
             httpPutReq.Abort();
         }
 
