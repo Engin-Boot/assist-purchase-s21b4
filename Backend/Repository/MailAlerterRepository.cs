@@ -48,10 +48,12 @@ namespace Backend.Repository
             string toaddr = "aleenasaleem.260199@gmail.com";//TO ADDRESS HERE
             string password = "S21B4@casestudy2";
 
-            MailMessage msg = new MailMessage();
-            msg.Subject = "Username &password";
-            msg.From = new MailAddress(fromaddr);
-            msg.Body = messageBody.ToString();
+            MailMessage msg = new MailMessage
+            {
+                Subject = "Username &password",
+                From = new MailAddress(fromaddr),
+                Body = messageBody.ToString()
+            };
             msg.To.Add(new MailAddress(toaddr));
             SmtpClient smtp = new SmtpClient
             {
