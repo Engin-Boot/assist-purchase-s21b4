@@ -31,17 +31,20 @@ namespace Backend.Repository
             var isDeleted = _csvHandler.DeleteFromFile(id, _csvFilePath);
             return isDeleted;
         }
-        public void UpdateDevice(string id, DataModels.DeviceModel device)
+        public bool UpdateDevice(string id, DataModels.DeviceModel device)
         {
+            bool updated = false;
             var deviceDb = _csvHandler.ReadFile(_csvFilePath);
             foreach (var tempDevice in deviceDb)
             {
                 if (tempDevice.Id == id)
                 {
-                    _csvHandler.DeleteFromFile(tempDevice.Id, _csvFilePath);
-                    _csvHandler.WriteToFile(device, _csvFilePath);
+                    updated = _csvHandler.DeleteFromFile(tempDevice.Id, _csvFilePath);
+
+                    updated &= _csvHandler.WriteToFile(device, _csvFilePath);
                 }
             }
+            return updated;
             
         }
     }

@@ -9,6 +9,6 @@ namespace Backend.Repository
         bool DeleteDevice(string id);
         List<DeviceModel> GetAllDevices();
         DeviceModel GetDevice(string id);
-        void UpdateDevice(string id, DeviceModel device);
+        bool UpdateDevice(string id, DeviceModel device);
     }
 }
