@@ -38,10 +38,9 @@ namespace Backend.Utility
             {
                 lineCounter++;
                 var values = line.Split(',');
-                if (string.Compare(id, values[0], true, CultureInfo.CurrentCulture) != 0)
+                if (id != values[0])
                 {
                     devices.Add(line);
-
                 }
             }
             bool isDeleted = CompareDataListsAfterDelete(lineCounter, devices);

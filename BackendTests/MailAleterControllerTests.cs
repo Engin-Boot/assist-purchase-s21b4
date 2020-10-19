@@ -1,14 +1,8 @@
-﻿using System.Collections.Generic;
-using Xunit;
-using RestSharp;
-using RestSharp.Serialization.Json;
-using System.Net.Http;
-using Microsoft.AspNetCore.Hosting;
-using Backend.Repository;
+﻿using Xunit;
 
-namespace BackendControllersTests
+namespace BackendTests
 {
-    public class MailAlerterControllerTests
+    public class MailAleterControllerTests
     {
         readonly DataModels.CustomerModel _customer = new DataModels.CustomerModel()
         {
@@ -18,7 +12,7 @@ namespace BackendControllersTests
             CustomerPhoneNumber = "12345678",
             DeviceId = "VUEX3"
         };
-        Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new MailAlerterRepository());       
+        Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new Backend.Repository.MailAlerterRepository());
         [Fact]
         public void TestExpectingNewCustomerToBeAddedIfItDoesnotExist()
         {
