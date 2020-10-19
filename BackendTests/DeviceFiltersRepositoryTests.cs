@@ -7,7 +7,7 @@ namespace BackendTests
     public class DeviceFiltersRepositoryTests
     {
         readonly DeviceFiltersRepository _deviceFilters = new DeviceFiltersRepository();
-        List<DataModels.DeviceModel> _devices = new List<DataModels.DeviceModel>
+        readonly List<DataModels.DeviceModel> _devices = new List<DataModels.DeviceModel>
             {
                 new DataModels.DeviceModel
                 {

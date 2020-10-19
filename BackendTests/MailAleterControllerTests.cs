@@ -12,7 +12,7 @@ namespace BackendTests
             CustomerPhoneNumber = "12345678",
             DeviceId = "VUEX3"
         };
-        Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new Backend.Repository.MailAlerterRepository());
+        readonly Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new Backend.Repository.MailAlerterRepository());
         [Fact]
         public void TestExpectingNewCustomerToBeAddedIfItDoesnotExist()
         {

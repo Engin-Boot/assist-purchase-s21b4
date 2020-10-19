@@ -23,6 +23,8 @@ namespace BackendTests
             Assert.Null(_mailAlerterRepository.FindCustomer(customer.CustomerId));
             _mailAlerterRepository.AddCustomer(customer);
             Assert.Equal("Tyrell",_mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerName);
+            Assert.Equal("tyrell@example.com", _mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerEmailId);
+            Assert.Equal("1234567890", _mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerPhoneNumber);
 
         }
         [Fact]
