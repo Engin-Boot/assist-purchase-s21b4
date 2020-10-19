@@ -33,19 +33,19 @@ namespace Backend.Controllers
         }
 
         [HttpPost("authenticate")]
-        public IActionResult CustomerAuthentication([FromBody] CustomerModel customer)
+        public string CustomerAuthentication([FromBody] CustomerModel customer)
         {
 
             var customerDetails = _mailAlerterRespository.FindCustomer(customer.CustomerId);
             if (customerDetails == null)
             {
                 _mailAlerterRespository.AddCustomer(customer);
-                return Ok("New Customer");
+                return "New Customer";
             }
 
             customerDetails.DeviceId = customer.DeviceId;
             _mailAlerterRespository.AddCustomer(customer);
-            return Ok("Existing Customer");
+            return "Existing Customer";
         }
     }
 }

@@ -93,17 +93,17 @@ namespace Backend.Utility
 
         public bool WriteToFile(DeviceModel data, string filepath)
         {
-            bool isWritten = AppendTextToFile(data,filepath);
-            return isWritten;
+            if (!File.Exists(filepath))
+            {
+                return false;
+            }
+            return AppendTextToFile(data,filepath);
         }
 
         private bool AppendTextToFile(DeviceModel data,string filepath)
         {
             bool isWritten = false;
-            if (!File.Exists(filepath))
-            {
-                return isWritten;
-            }
+            
             string csvData = FormatObjectDataToString(data);
             if (!string.IsNullOrEmpty(csvData))
             {

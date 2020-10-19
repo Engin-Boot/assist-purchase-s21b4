@@ -31,14 +31,14 @@ namespace Backend.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult Update(string id, [FromBody] DataModels.DeviceModel updatedState)
+        public bool Update(string id, [FromBody] DataModels.DeviceModel updatedState)
         {
             if (id != null&& updatedState!=null)
             {
-                _repository.UpdateDevice(id, updatedState);
-                return Ok();
+                return _repository.UpdateDevice(id, updatedState);
+                
             }
-            return NotFound();
+            return false;
             
         }
 

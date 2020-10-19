@@ -4,24 +4,17 @@ using RestSharp.Serialization.Json;
 using System.Collections.Generic;
 using System.Net;
 using Xunit;
-
+using System.Runtime.Serialization.Json;
 namespace BackendControllersTests
 {
     public class DeviceControllerTests
     {
-        readonly JsonDeserializer _deserializer = new JsonDeserializer();
-
+        readonly Backend.Controllers.DeviceController _controller = new Backend.Controllers.DeviceController(new Backend.Repository.DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\BackendTests\TestDevices.csv"));
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
         {
-            RestClient client = new RestClient("http://localhost:5000/api/devices");
-            RestRequest request = new RestRequest("", Method.GET);
-            IRestResponse response = client.Execute(request);
-            var data = _deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
-            Assert.True(response.StatusCode == (HttpStatusCode.OK));
-            Assert.True(response.ContentType.Equals(ContentType.Json + "; charset=utf-8"));
-            Assert.True(data[0].Name == "IntelliVue MX750");
-
+            var devices = (List<DataModels.DeviceModel>)_controller.Get();
+            Assert.True(devices[0].Name == "IntelliVue MX750");
         }
         [Fact]
         public void TextExpectingDeviceToBeAddedWhenCalledWithDeviceModelObject()
@@ -36,42 +29,18 @@ namespace BackendControllersTests
                 Resolution = "1090 x 1020",
                 Weight = 1.2f,
             };
-
-            HttpWebRequest httpPostReq = WebRequest.CreateHttp("http://localhost:5000/api/devices");
-            httpPostReq.Method = "POST";
-            httpPostReq.ContentType = "application/json";
-            System.Runtime.Serialization.Json.DataContractJsonSerializer deviceDataJsonSerializer =
-                new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
-            deviceDataJsonSerializer.WriteObject(httpPostReq.GetRequestStream(), device);
-            if (httpPostReq.GetResponse() is HttpWebResponse response)
-                Assert.True(response.StatusCode == HttpStatusCode.OK);
-
-            var id = device.Id;
-            RestClient client = new RestClient("http://localhost:5000/api/devices");
-            RestRequest request = new RestRequest("/" + id, Method.GET);
-            client.Execute(request);
+            Assert.True(_controller.Post(device));
         }
         [Fact]
         public void TestExpectingADeviceWhenCalledWithValidStringId()
         {
-            var id = "VUEMX750";
-            RestClient client = new RestClient("http://localhost:5000/api/devices");
-            RestRequest request = new RestRequest("/" + id, Method.GET);
-            IRestResponse response = client.Execute(request);
-            var data = _deserializer.Deserialize<DataModels.DeviceModel>(response);
-            Assert.True(response.StatusCode == (HttpStatusCode.OK));
-            Assert.True(data.Name == "IntelliVue MX750");
+            var device = _controller.Get("VUEMX750");
+            Assert.Equal("IntelliVue MX750", device.Name);
         }
         [Fact]
         public void TestExpectingDeviceToBeRemovedWhenCalledWithStringId()
         {
-
-            HttpWebRequest httpDeleteReq = WebRequest.CreateHttp("http://localhost:5000/api/devices/VUEMX300");
-            httpDeleteReq.Method = "DELETE";
-            httpDeleteReq.ContentType = "application/json";
-           if (httpDeleteReq.GetResponse() is HttpWebResponse response)
-                Assert.True(response.StatusCode == HttpStatusCode.OK);
-
+            Assert.True(_controller.Delete("VUEMX300"));
         }
 
         [Fact]
@@ -87,18 +56,7 @@ namespace BackendControllersTests
                 Resolution = "1024 x 420",
                 Weight = 1.9f,
             };
-
-            //testing the update API 
-            HttpWebRequest httpPutReq = WebRequest.CreateHttp("http://localhost:5000/api/devices/VUEX3");
-            httpPutReq.Method = "PUT";
-            httpPutReq.ContentType = "application/json";
-            System.Runtime.Serialization.Json.DataContractJsonSerializer deviceDataJsonSerializer =
-                new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(DataModels.DeviceModel));
-            deviceDataJsonSerializer.WriteObject(httpPutReq.GetRequestStream(), device);
-            if (httpPutReq.GetResponse() is HttpWebResponse response)
-                Assert.True(response.StatusCode == HttpStatusCode.OK);
-            httpPutReq.Abort();
+            Assert.True(_controller.Update("VUEX3", device));
         }
-
     }
 }

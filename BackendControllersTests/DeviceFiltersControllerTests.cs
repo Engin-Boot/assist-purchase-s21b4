@@ -8,24 +8,26 @@ namespace BackendControllersTests
 {
     public class DeviceFiltersControllerTests
     {
+        readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository());
         [Fact]
         public void TestExpectingListOfFilteredDevicesWhenCalledWithListOfFilters()
         {
-            RestClient client = new RestClient("http://localhost:5000/api/filters");
-            string jsonData = "1.8,1920 x 1080,ECG,7";
-            RestRequest request = new RestRequest("/" + jsonData, Method.GET);
-            IRestResponse response = client.Execute(request);
-
-            var deserializer = new JsonDeserializer();
-            var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
-            Assert.Equal("VUEMX750", data[0].Id);
-            Assert.Equal("VUEMX500", data[1].Id);
-
-            jsonData = "1.8,1920 x 1080,ECG,12";
-            request = new RestRequest("/" + jsonData, Method.GET);
-            response = client.Execute(request);
-            data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
-            Assert.False(data.Any());
+            var filteredDevices = _controller.Get("1.8,1920 x 1080,ECG,7");
+            Assert.Equal("VUEMX750", filteredDevices[0].Id);
+            Assert.Equal("VUEMX500", filteredDevices[1].Id);
         }
+        [Fact]
+        public void TestExpectingEmptyListWhenNoDeviceQualifiesTheFilters()
+        {
+            var filteredDevices = _controller.Get("1.6,1920 x 1080,ECG,12");
+            Assert.False(filteredDevices.Any());
+        }
+        [Fact]
+        public void TestExpectingNullWhenInputStringOfFiltersIsNotInCorrectFormat()
+        {
+            var filteredDevices = _controller.Get("");
+            Assert.Null(filteredDevices);
+        }
+
     }
 }
