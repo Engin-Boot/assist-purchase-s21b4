@@ -9,6 +9,7 @@ namespace BackendControllersTests
 {
     public class DeviceControllerTests
     {
+        readonly JsonDeserializer _deserializer = new JsonDeserializer();
 
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
@@ -16,8 +17,7 @@ namespace BackendControllersTests
             RestClient client = new RestClient("http://localhost:5000/api/devices");
             RestRequest request = new RestRequest("", Method.GET);
             IRestResponse response = client.Execute(request);
-            var deserializer = new JsonDeserializer();
-            var data = deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
+            var data = _deserializer.Deserialize<List<DataModels.DeviceModel>>(response);
             Assert.True(response.StatusCode == (HttpStatusCode.OK));
             Assert.True(response.ContentType.Equals(ContentType.Json + "; charset=utf-8"));
             Assert.True(data[0].Name == "IntelliVue MX750");
@@ -30,8 +30,8 @@ namespace BackendControllersTests
             {
                 Name = "IntelliVue MX300",
                 Id = "VUEMX300",
-                BatteryCapacity = "7",
-                Measurements = new List<string> { "ECG", "SPO2" },
+                BatteryCapacity = "11",
+                Measurements = new List<string> { "ECG"},
                 Overview = "Something",
                 Resolution = "1090 x 1020",
                 Weight = 1.2f,
@@ -58,8 +58,7 @@ namespace BackendControllersTests
             RestClient client = new RestClient("http://localhost:5000/api/devices");
             RestRequest request = new RestRequest("/" + id, Method.GET);
             IRestResponse response = client.Execute(request);
-            var deserializer = new JsonDeserializer();
-            var data = deserializer.Deserialize<DataModels.DeviceModel>(response);
+            var data = _deserializer.Deserialize<DataModels.DeviceModel>(response);
             Assert.True(response.StatusCode == (HttpStatusCode.OK));
             Assert.True(data.Name == "IntelliVue MX750");
         }
