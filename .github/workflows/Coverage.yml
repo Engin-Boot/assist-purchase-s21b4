@@ -15,10 +15,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
            dotnet-version: 3.1.101
-      
-      - name: Run with dotnet
-        run: dotnet run -p Backend
-        
+     
       - name: Generate coverage report
         run: dotnet test --collect:"XPlat Code Coverage"
       
