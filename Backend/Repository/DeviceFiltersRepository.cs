@@ -17,7 +17,7 @@ namespace Backend.Repository
             return filter3;
            
         }
-        private List<DataModels.DeviceModel> ApplyWeightFilter(string filterValue, List<DataModels.DeviceModel> filter1)
+        public List<DataModels.DeviceModel> ApplyWeightFilter(string filterValue, List<DataModels.DeviceModel> filter1)
         {
             float parsedValue;
             try
@@ -37,9 +37,9 @@ namespace Backend.Repository
              
             
         }
-        private List<DataModels.DeviceModel> ApplyResolutionFilter(string filterValue, List<DataModels.DeviceModel> filter2)
+        public List<DataModels.DeviceModel> ApplyResolutionFilter(string filterValue, List<DataModels.DeviceModel> filter2)
         {
-            if (filter2 != null && filterValue!=null)
+            if (filter2 != null && !string.IsNullOrEmpty(filterValue))
             {
                 return filter2.FindAll(device => device.Resolution == filterValue);
             }
@@ -48,9 +48,9 @@ namespace Backend.Repository
                 return filter2;
             }
         }
-        private List<DataModels.DeviceModel> ApplyMeasurementsFilter(string filterValue, List<DataModels.DeviceModel> filter3)
+        public List<DataModels.DeviceModel> ApplyMeasurementsFilter(string filterValue, List<DataModels.DeviceModel> filter3)
         {
-            if (filter3 != null && filterValue!=null)
+            if (filter3 != null && !string.IsNullOrEmpty(filterValue))
             {
                 return filter3.FindAll(device => device.Measurements.Contains(filterValue));
             }
@@ -62,9 +62,9 @@ namespace Backend.Repository
 
             
         }
-        private List<DataModels.DeviceModel> ApplyBatteryCapacityFilter(string filterValue, List<DataModels.DeviceModel> filter4)
+        public List<DataModels.DeviceModel> ApplyBatteryCapacityFilter(string filterValue, List<DataModels.DeviceModel> filter4)
         {
-            if (filter4 != null && filterValue!=null)
+            if (filter4 != null && !string.IsNullOrEmpty(filterValue))
             {
                 return filter4.FindAll(device => device.BatteryCapacity == filterValue);
             }

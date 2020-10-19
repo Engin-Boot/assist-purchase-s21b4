@@ -17,7 +17,7 @@ namespace BackendTests
             Measurements = new List<string> { "ECG", "SPO2" },
             Overview = "Something",
             Resolution = "1090 x 1020",
-            Weight = 1.2f,
+            Weight = 1.2f
         };
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
@@ -59,7 +59,7 @@ namespace BackendTests
         [Fact]
         public void TestExpectingFalseWhenDeviceCouldNotBeAddedToTheFile()
         {
-            string tempFilepath = @"some_random_filepath";
+            string tempFilepath = "";
             var tempDeviceRepository = new DeviceRepository(tempFilepath);
             Assert.False(tempDeviceRepository.AddNewDevice(_device));
         }

@@ -64,11 +64,7 @@ namespace Backend.Utility
             List<DeviceModel> devices = new List<DeviceModel>();
             try
             {
-                if (File.Exists(filepath))
-                {
-                   
                     devices = WriteObjectsToList(devices, filepath);
-                }
             }
             catch (Exception e)
             {
@@ -97,29 +93,33 @@ namespace Backend.Utility
 
         public bool WriteToFile(DeviceModel data, string filepath)
         {
-            bool isWritten;
-            try
-            {
-                isWritten = AppendTextToFile(data,filepath);
-               
-            }
-            catch (Exception e)
-            {
-                isWritten = false;
-                Console.WriteLine(e.Message);
-            }
+            bool isWritten = AppendTextToFile(data,filepath);
             return isWritten;
         }
 
         private bool AppendTextToFile(DeviceModel data,string filepath)
         {
             bool isWritten = false;
-            string csvData = FormatObjectDataToString(data);
-            if (File.Exists(filepath) && csvData != null)
+            if (!File.Exists(filepath))
             {
-                File.AppendAllText(filepath, csvData + '\n');
-                isWritten = true;
+                return isWritten;
             }
+            string csvData = FormatObjectDataToString(data);
+            if (!string.IsNullOrEmpty(csvData))
+            {
+                try
+                {
+                    File.AppendAllText(filepath, csvData + '\n');
+                    isWritten = true;
+                }
+                catch (Exception e)
+                {
+                    isWritten = false;
+                    Console.WriteLine(e.Message);
+                }
+            }
+            
+            
             return isWritten;
         }
         private string FormatObjectDataToString(DeviceModel device)

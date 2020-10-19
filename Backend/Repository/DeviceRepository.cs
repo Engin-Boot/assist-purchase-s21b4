@@ -23,13 +23,11 @@ namespace Backend.Repository
         }
         public bool AddNewDevice(DataModels.DeviceModel device)
         {
-            bool isAdded = _csvHandler.WriteToFile(device, _csvFilePath);
-            return isAdded;
+            return  _csvHandler.WriteToFile(device, _csvFilePath);
         }
         public bool DeleteDevice(string id)
         {
-            var isDeleted = _csvHandler.DeleteFromFile(id, _csvFilePath);
-            return isDeleted;
+            return _csvHandler.DeleteFromFile(id, _csvFilePath);
         }
         public bool UpdateDevice(string id, DataModels.DeviceModel device)
         {
@@ -40,7 +38,6 @@ namespace Backend.Repository
                 if (tempDevice.Id == id)
                 {
                     updated = _csvHandler.DeleteFromFile(tempDevice.Id, _csvFilePath);
-
                     updated &= _csvHandler.WriteToFile(device, _csvFilePath);
                 }
             }
