@@ -124,7 +124,7 @@ namespace BackendTests.BackendApiTests
                 Resolution = "1024 x 420",
                 Weight = 1.9f,
             }; 
-            //ReSharper disbale all
+            //ReSharper disable all
             var response = await _mockServer.Client.PutAsync(_url + "/VUEX777", new StringContent(JsonConvert.SerializeObject(updatedstate), Encoding.UTF8, "application/json"));
             var jsonString = await response.Content.ReadAsStringAsync(); 
             Assert.Equal("false", JsonConvert.DeserializeObject<string>(jsonString));

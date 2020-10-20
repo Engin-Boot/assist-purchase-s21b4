@@ -29,7 +29,7 @@ namespace Backend.Repository
             }
             
         }
-
+        //ReSharper disable all
         public CustomerModel FindCustomer(string customerId)
         {
             var customerList = _csvHandler.ReadCustomerDetailsFromFile(_csvFilePath);
@@ -41,6 +41,7 @@ namespace Backend.Repository
 
             return null;
         }
+        //ReSharper restore all
         public bool DeleteCustomerDetails(string id)
         {
             return _csvHandler.DeleteFromFile(id, _csvFilePath);
