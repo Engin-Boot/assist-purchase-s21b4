@@ -1,4 +1,5 @@
 ﻿using DataModels;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
@@ -9,21 +10,22 @@ namespace Backend.Repository
 {
     public class MailAlerterRepository : IMailAlerterRepository
     {
-        private readonly List<CustomerModel> _customerList;
+        private readonly string _csvFilePath;
+        readonly Utility.CustomerDataBaseHandler _csvHandler = new Utility.CustomerDataBaseHandler();
 
-        public MailAlerterRepository()
+        public MailAlerterRepository(string filepath)
         {
-
-            _customerList = new List<CustomerModel>();
+            this._csvFilePath = filepath;
         }
         public void AddCustomer(CustomerModel customer)
         {
-            _customerList.Add(customer);
+            _csvHandler.WriteToFile(customer, _csvFilePath);
         }
 
         public CustomerModel FindCustomer(string customerId)
         {
-            foreach (var customer in _customerList)
+            var customerList = _csvHandler.ReadCustomerDetailsFromFile(_csvFilePath);
+            foreach (var customer in customerList)
             {
                 if (customerId == customer.CustomerId)
                     return customer;
@@ -31,16 +33,18 @@ namespace Backend.Repository
 
             return null;
         }
-
-        public void SendEmail(CustomerModel customer)
+        public bool DeleteCustomerDetails(string id)
         {
-
+            return _csvHandler.DeleteFromFile(id, _csvFilePath);
+        }
+        public bool SendEmail(CustomerModel customer)
+        {
+            bool sent = false;
             var messageBody = new StringBuilder();
-            messageBody.Append("Hello,\n");
-            messageBody.Append("The following customer has booked the product.\n");
-            messageBody.Append("Please see the details and attend the same.\n");
+            messageBody.Append("The following customer has requested a device.\n");
+            messageBody.Append("Find the details below.\n");
             messageBody.Append("Customer Name: " + customer.CustomerName + "\n");
-            messageBody.Append("Customer Phone Number: " + customer.CustomerPhoneNumber + "\n");
+            messageBody.Append("Customer Phone Number: " + customer.CustomerContact + "\n");
             messageBody.Append("Customer Email Id: " + customer.CustomerEmailId + "\n");
             messageBody.Append("Device Id: " + customer.DeviceId);
 
@@ -50,7 +54,7 @@ namespace Backend.Repository
 
             MailMessage msg = new MailMessage
             {
-                Subject = "Username &password",
+                Subject = "Customer requested a contact",
                 From = new MailAddress(fromaddr),
                 Body = messageBody.ToString()
             };
@@ -60,13 +64,23 @@ namespace Backend.Repository
                 Host = "smtp.gmail.com",
                 Port = 587,
                 UseDefaultCredentials = false,
-                EnableSsl = true
+                EnableSsl = true,
+                Credentials = new NetworkCredential(fromaddr, password),
+                DeliveryMethod = SmtpDeliveryMethod.Network
             };
-            NetworkCredential nc = new NetworkCredential(fromaddr, password);
-            smtp.Credentials = nc;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Send(msg);
+            try
+            {
+                smtp.Send(msg);
+                sent = true;
+            }
+            catch (Exception e)
+            {
+                sent = false;
+                Console.WriteLine(e.Message);
+            }
 
+            smtp.Dispose();
+            return sent;
         }
     }
 }

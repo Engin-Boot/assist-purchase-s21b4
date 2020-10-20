@@ -7,16 +7,16 @@ namespace BackendTests
 {
     public class MailAleterRepositoryTests
     {
-        readonly MailAlerterRepository _mailAlerterRepository = new MailAlerterRepository();
+        readonly MailAlerterRepository _mailAlerterRepository = new MailAlerterRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\BackendTests\TestCustomers.csv");
         [Fact]
         public void TestExpectingCustomerToBeAddedIfItDoesnotExist()
         {
             CustomerModel customer = new CustomerModel()
             {
-                CustomerId = "218",
+                CustomerId = "212",
                 CustomerName = "Tyrell",
                 CustomerEmailId = "tyrell@example.com",
-                CustomerPhoneNumber = "1234567890",
+                CustomerContact = "1234567890",
                 DeviceId = "VUEMX750"
             };
 
@@ -24,7 +24,8 @@ namespace BackendTests
             _mailAlerterRepository.AddCustomer(customer);
             Assert.Equal("Tyrell",_mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerName);
             Assert.Equal("tyrell@example.com", _mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerEmailId);
-            Assert.Equal("1234567890", _mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerPhoneNumber);
+            Assert.Equal("1234567890", _mailAlerterRepository.FindCustomer(customer.CustomerId).CustomerContact);
+            _mailAlerterRepository.DeleteCustomerDetails(customer.CustomerId);
 
         }
         [Fact]
@@ -32,10 +33,10 @@ namespace BackendTests
         {
             CustomerModel customer = new CustomerModel()
             {
-                CustomerId = "219",
+                CustomerId = "221",
                 CustomerName = "Tyrell",
                 CustomerEmailId = "tyrell@example.com",
-                CustomerPhoneNumber = "1234567890",
+                CustomerContact = "1234567890",
                 DeviceId = "VUEMX750"
             };
 
@@ -49,11 +50,11 @@ namespace BackendTests
                 CustomerId = "307",
                 CustomerName = "ElliotAlderson",
                 CustomerEmailId = "Elliot@example.com",
-                CustomerPhoneNumber = "1234567890",
+                CustomerContact = "1234567890",
                 DeviceId = "VUEMX750"
             };
 
-            _mailAlerterRepository.SendEmail(customer);
+            Assert.True(_mailAlerterRepository.SendEmail(customer));
         }
     }
 }

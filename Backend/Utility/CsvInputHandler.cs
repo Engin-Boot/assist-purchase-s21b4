@@ -81,7 +81,7 @@ namespace Backend.Utility
                 if (line != null)
                 {
                     var values = line.Split(',');
-                    DeviceModel device = FormatStringToObject(values);
+                    DeviceModel device = FormatStringToDeviceObject(values);
                     devices.Add(device);
                 }
                 
@@ -103,7 +103,7 @@ namespace Backend.Utility
         {
             bool isWritten = false;
             
-            string csvData = FormatObjectDataToString(data);
+            string csvData = FormatDeviceObjectDataToString(data);
             if (!string.IsNullOrEmpty(csvData))
             {
                 try
@@ -121,7 +121,7 @@ namespace Backend.Utility
             
             return isWritten;
         }
-        private string FormatObjectDataToString(DeviceModel device)
+        private string FormatDeviceObjectDataToString(DeviceModel device)
         {
             string csvFormatData = null;
             try
@@ -149,7 +149,7 @@ namespace Backend.Utility
 
         }
 
-        private DeviceModel FormatStringToObject(string[] values)
+        private DeviceModel FormatStringToDeviceObject(string[] values)
         {
             DeviceModel device = new DeviceModel
             {
@@ -170,5 +170,8 @@ namespace Backend.Utility
 
             return lineCounter != devices.Count;
         }
+
+
+        
     }
 }

@@ -47,5 +47,10 @@ namespace Backend.Controllers
             _mailAlerterRespository.AddCustomer(customer);
             return "Existing Customer";
         }
+        [HttpDelete("{id}")]
+        public bool Delete(string id)
+        {
+            return _mailAlerterRespository.DeleteCustomerDetails(id);
+        }
     }
 }

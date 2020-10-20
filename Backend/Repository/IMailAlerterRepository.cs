@@ -5,7 +5,8 @@ namespace Backend.Repository
     public interface IMailAlerterRepository
     {
         void AddCustomer(CustomerModel customer);
+        bool DeleteCustomerDetails(string id);
         CustomerModel FindCustomer(string customerId);
-        void SendEmail(CustomerModel customer);
+        bool SendEmail(CustomerModel customer);
     }
 }

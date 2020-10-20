@@ -21,7 +21,7 @@ namespace Backend
             services.AddControllers();
             services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Devices.csv"));
             services.AddScoped<IDeviceFiltersRepository, DeviceFiltersRepository>();
-            services.AddSingleton<IMailAlerterRepository, MailAlerterRepository>();
+            services.AddScoped<IMailAlerterRepository>(mailAlerterRepository => new MailAlerterRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Backend\Customers.csv"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
