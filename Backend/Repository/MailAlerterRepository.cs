@@ -18,7 +18,16 @@ namespace Backend.Repository
         }
         public bool AddCustomer(CustomerModel customer)
         {
-            return _csvHandler.WriteToFile(customer, _csvFilePath);
+            if(FindCustomer(customer.CustomerId) == null)
+            {
+                return _csvHandler.WriteToFile(customer, _csvFilePath);
+            }
+            else
+            {
+                _csvHandler.DeleteFromFile(customer.CustomerId,_csvFilePath);
+                return _csvHandler.WriteToFile(customer, _csvFilePath);
+            }
+            
         }
 
         public CustomerModel FindCustomer(string customerId)
