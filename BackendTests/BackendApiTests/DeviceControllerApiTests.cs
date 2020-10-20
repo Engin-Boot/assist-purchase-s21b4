@@ -47,6 +47,18 @@ namespace BackendTests.BackendApiTests
         [Fact]
         public async Task TestExpectingTrueWhenCalledWithValidIdToDeleteMethod()
         {
+            var device = new DataModels.DeviceModel()
+            {
+                Id = "VUEMX300",
+                Name = "IntelliVue MX300",
+                Measurements = new List<string> { "ECG" },
+                Resolution = "190 x 1080",
+                Overview = "some_random_overview",
+                Weight = 1.6f,
+                BatteryCapacity = "11"
+
+            };
+            await _mockServer.Client.PostAsync(_url, new StringContent(JsonConvert.SerializeObject(device), Encoding.UTF8, "application/json"));
             var response = await _mockServer.Client.DeleteAsync(_url + "/VUEMX300");
             var jsonString = await response.Content.ReadAsStringAsync();
             Assert.Equal("true",JsonConvert.DeserializeObject<string>(jsonString));
