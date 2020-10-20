@@ -58,7 +58,8 @@ namespace BackendTests.BackendApiTests
                 BatteryCapacity = "11"
 
             };
-            await _mockServer.Client.PostAsync(_url, new StringContent(JsonConvert.SerializeObject(device), Encoding.UTF8, "application/json"));
+            //ReSharper disable all
+            await _mockServer.Client.PostAsync(_url, new StringContent(JsonConvert.SerializeObject(device), Encoding.UTF8, "application/json"));//ReSharper restore all
             var response = await _mockServer.Client.DeleteAsync(_url + "/VUEMX300");
             var jsonString = await response.Content.ReadAsStringAsync();
             Assert.Equal("true",JsonConvert.DeserializeObject<string>(jsonString));
@@ -122,7 +123,8 @@ namespace BackendTests.BackendApiTests
                 Resolution = "1024 x 420",
                 Weight = 1.9f,
             }; 
-            var response = await _mockServer.Client.PutAsync(_url + "/VUEX777", new StringContent(JsonConvert.SerializeObject(updatedstate), Encoding.UTF8, "application/json"));
+            //ReSharper disbale all
+            var response = await _mockServer.Client.PutAsync(_url + "/VUEX777", new StringContent(JsonConvert.SerializeObject(updatedstate), Encoding.UTF8, "application/json")); // ReSharper restore all
             var jsonString = await response.Content.ReadAsStringAsync();
             Assert.Equal("false", JsonConvert.DeserializeObject<string>(jsonString));
         }

@@ -20,27 +20,16 @@ namespace Backend.Controllers
         [HttpPost("alert")]
         public bool PostAlert([FromBody] CustomerModel customer)
         {
-            try
-            {
-                return _mailAlerterRespository.SendEmail(customer);
-               ;
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            return _mailAlerterRespository.SendEmail(customer);
         }
-
         [HttpPost("authenticate")]
         public string CustomerAuthentication([FromBody] CustomerModel customer)
         {
-
             var customerDetails = _mailAlerterRespository.FindCustomer(customer.CustomerId);
             if (customerDetails == null)
             {
-                _mailAlerterRespository.AddCustomer(customer);
-                return "New Customer";
+                if (_mailAlerterRespository.AddCustomer(customer))
+                    return "New Customer";
             }
 
             customerDetails.DeviceId = customer.DeviceId;
