@@ -24,12 +24,11 @@ namespace Backend.Repository
             }
             else
             {
-                _csvHandler.DeleteFromFile(customer.CustomerId,_csvFilePath);
+                _csvHandler.DeleteFromFile(FindCustomer(customer.CustomerId).CustomerId,_csvFilePath);
                 return _csvHandler.WriteToFile(customer, _csvFilePath);
             }
             
         }
-        //ReSharper disable all
         public CustomerModel FindCustomer(string customerId)
         {
             var customerList = _csvHandler.ReadCustomerDetailsFromFile(_csvFilePath);
@@ -41,7 +40,6 @@ namespace Backend.Repository
 
             return null;
         }
-        //ReSharper restore all
         public bool DeleteCustomerDetails(string id)
         {
             return _csvHandler.DeleteFromFile(id, _csvFilePath);
