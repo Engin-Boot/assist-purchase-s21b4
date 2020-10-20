@@ -69,16 +69,8 @@ namespace Backend.Utility
             csvData += "\n";
             if (!string.IsNullOrEmpty(csvData))
             {
-                try
-                {
-                    File.AppendAllText(filepath, csvData);
-                    isWritten = true;
-                }
-                catch (Exception e)
-                {
-                    isWritten = false;
-                    Console.WriteLine(e.Message);
-                }
+                File.AppendAllText(filepath, csvData);
+                isWritten = true;
             }
             return isWritten;
         }

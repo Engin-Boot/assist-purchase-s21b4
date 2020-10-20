@@ -106,16 +106,8 @@ namespace Backend.Utility
             string csvData = FormatDeviceObjectDataToString(data);
             if (!string.IsNullOrEmpty(csvData))
             {
-                try
-                {
-                    File.AppendAllText(filepath, csvData + '\n');
-                    isWritten = true;
-                }
-                catch (Exception e)
-                {
-                    isWritten = false;
-                    Console.WriteLine(e.Message);
-                }
+                File.AppendAllText(filepath, csvData + '\n');
+                isWritten = true;
             }
             
             
