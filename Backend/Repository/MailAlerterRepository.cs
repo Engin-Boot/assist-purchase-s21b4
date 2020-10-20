@@ -17,9 +17,9 @@ namespace Backend.Repository
         {
             this._csvFilePath = filepath;
         }
-        public void AddCustomer(CustomerModel customer)
+        public bool AddCustomer(CustomerModel customer)
         {
-            _csvHandler.WriteToFile(customer, _csvFilePath);
+            return _csvHandler.WriteToFile(customer, _csvFilePath);
         }
 
         public CustomerModel FindCustomer(string customerId)
@@ -39,7 +39,7 @@ namespace Backend.Repository
         }
         public bool SendEmail(CustomerModel customer)
         {
-            bool sent = false;
+            bool sent;
             var messageBody = new StringBuilder();
             messageBody.Append("The following customer has requested a device.\n");
             messageBody.Append("Find the details below.\n");

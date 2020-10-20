@@ -1,8 +1,6 @@
-﻿using System.Net;
-using System.Text;
+﻿
 using System.Threading.Tasks;
 using Xunit;
-using System.Net.Http;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
