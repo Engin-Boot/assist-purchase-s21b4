@@ -310,7 +310,6 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.csprojAssemblyReference.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.AssemblyInfoInputs.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.AssemblyInfo.cs
-E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.csproj.CoreCompileInputs.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.csproj.CopyComplete
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.pdb
@@ -321,3 +320,6 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\MimeKit.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.TestHost.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\BackendTests\obj\Debug\netcoreapp3.1\BackendTests.csproj.CoreCompileInputs.cache

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3VSOR0u+gNxHAZePMqvbMLhqV0veq4hsYqhW9ROa6xVMzAJHWh3Zyn9nRVLmfiBdHX/lqiFX+aC7lmblWAKBew==",
+  "dgSpecHash": "aNV+MrMTpe9rb85SrrFYkA3beJVRCTCQkHQB8GyHWsNfD8QgtXdOlxjvZfwiAfPHjkgCjkk9FkfPyQNoMlFjnw==",
   "success": true,
   "projectFilePath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\BackendTests\\BackendTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\mailkit\\2.6.0\\mailkit.2.6.0.nupkg.sha512",
+    "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.aspnetcore.testhost\\3.1.9\\microsoft.aspnetcore.testhost.3.1.9.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.4\\microsoft.extensions.dependencyinjection.3.1.4.nupkg.sha512",
@@ -51,6 +52,7 @@
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.io.pipelines\\4.7.3\\system.io.pipelines.4.7.3.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
