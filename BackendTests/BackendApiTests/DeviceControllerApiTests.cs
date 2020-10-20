@@ -127,7 +127,8 @@ namespace BackendTests.BackendApiTests
             //ReSharper disbale all
             var response = await _mockServer.Client.PutAsync(_url + "/VUEX777", new StringContent(JsonConvert.SerializeObject(updatedstate), Encoding.UTF8, "application/json"));
             var jsonString = await response.Content.ReadAsStringAsync(); 
-            Assert.Equal("false", JsonConvert.DeserializeObject<string>(jsonString));//ReSharper restore all
+            Assert.Equal("false", JsonConvert.DeserializeObject<string>(jsonString));
+            //ReSharper restore all
         }
 
     }
