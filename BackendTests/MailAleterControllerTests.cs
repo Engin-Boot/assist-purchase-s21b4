@@ -16,14 +16,14 @@ namespace BackendTests
         [Fact]
         public void TestExpectingNewCustomerToBeAddedIfItDoesnotExist()
         {
-            Assert.Equal("New Customer", _controller.CustomerAuthentication(_customer));
+            Assert.True(_controller.CustomerAuthentication(_customer));
             _controller.Delete(_customer.CustomerId);
         }
         [Fact]
         public void TestExpectingExistingCustomerToBeAuthenticatedIfItExists()
         {
             _controller.CustomerAuthentication(_customer);
-            Assert.Equal("Existing Customer", _controller.CustomerAuthentication(_customer));
+            Assert.True(_controller.CustomerAuthentication(_customer));
             _controller.Delete(_customer.CustomerId);
         }
         [Fact]

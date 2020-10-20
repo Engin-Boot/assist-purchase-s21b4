@@ -1,5 +1,4 @@
-﻿using System;
-using DataModels;
+﻿using DataModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -23,18 +22,9 @@ namespace Backend.Controllers
             return _mailAlerterRespository.SendEmail(customer);
         }
         [HttpPost("authenticate")]
-        public string CustomerAuthentication([FromBody] CustomerModel customer)
+        public bool CustomerAuthentication([FromBody] CustomerModel customer)
         {
-            var customerDetails = _mailAlerterRespository.FindCustomer(customer.CustomerId);
-            if (customerDetails == null)
-            {
-                if (_mailAlerterRespository.AddCustomer(customer))
-                    return "New Customer";
-            }
-
-            customerDetails.DeviceId = customer.DeviceId;
-            _mailAlerterRespository.AddCustomer(customer);
-            return "Existing Customer";
+            return _mailAlerterRespository.AddCustomer(customer);
         }
         [HttpDelete("{id}")]
         public bool Delete(string id)
