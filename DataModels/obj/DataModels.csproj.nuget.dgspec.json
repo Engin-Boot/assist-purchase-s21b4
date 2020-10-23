@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {}
+    "C:\\Users\\MEITY\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {}
   },
   "projects": {
-    "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {
+    "C:\\Users\\MEITY\\assist-purchase-s21b4\\DataModels\\DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
+        "projectUniqueName": "C:\\Users\\MEITY\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
         "projectName": "DataModels",
-        "projectPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
-        "packagesPath": "C:\\Users\\TOSHIBA\\.nuget\\packages\\",
-        "outputPath": "E:\\BootCamp\\NewFolder\\assist-purchase-s21b4\\DataModels\\obj\\",
+        "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\DataModels\\DataModels.csproj",
+        "packagesPath": "C:\\Users\\MEITY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\DataModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TOSHIBA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MEITY\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

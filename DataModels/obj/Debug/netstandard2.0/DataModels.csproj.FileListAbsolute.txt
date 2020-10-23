@@ -16,3 +16,12 @@ E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\
 E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
 E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.dll
 E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+C:\Users\MEITY\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
