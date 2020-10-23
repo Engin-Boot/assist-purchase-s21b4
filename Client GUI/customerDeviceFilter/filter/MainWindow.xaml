@@ -1,0 +1,31 @@
+﻿<Window x:Class="filter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:filter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Name="filter1Stack">
+                <TextBlock>Select Measurement</TextBlock>
+                
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter2Stack">
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter3Stack">
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter4Stack">
+
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Name="DevicesStack">
+            
+        </StackPanel>
+    </StackPanel>
+    
+    
+</Window>

@@ -1,0 +1,4 @@
+Id,Name,Overview,Measurements,Weight,BatteryCapacity,Resolution
+VUEMX750,IntelliVue MX750,The IntelliVue MX750 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.,ECG SPO2 Respiration NiBP,1.8,7,1920 x 1080
+VUEMX500,IntelliVue MX500,The IntelliVue MX500 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.,ECG SPO2 Respiration NiBP Pulse,1.8,7,1920 x 1080
+VUEX3,IntelliVue X3,The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.,ECG SPO2 Respiration,1.9,10,1024 x 420

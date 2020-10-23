@@ -1,0 +1,45 @@
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\assistPurchase\AssistPurchase\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+E:\BootCamp\NewFolder\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+F:\visualstudioprojects\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-s21b4\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.pdb

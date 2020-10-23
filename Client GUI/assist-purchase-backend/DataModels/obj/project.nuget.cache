@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ISPNOFX3GuBDpNqT42jthaLRK2y6vAbMJPDn+NXvU6GSG6Ym8yHI9c14siAPiwKlvXFcMsTtIdTGuf3ESL5R/Q==",
+  "success": true,
+  "projectFilePath": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\DataModels\\DataModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ajinkya\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ajinkya\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
