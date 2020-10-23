@@ -8,19 +8,32 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical">
+            
+            <StackPanel Orientation="Vertical" Name="filter1StackLabel">
+
+            </StackPanel>
             <StackPanel Orientation="Vertical" Name="filter1Stack">
-                <TextBlock>Select Measurement</TextBlock>
                 
             </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter2StackLabel">
+
+            </StackPanel>
             <StackPanel Orientation="Vertical" Name="filter2Stack">
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter3StackLabel">
 
             </StackPanel>
             <StackPanel Orientation="Vertical" Name="filter3Stack">
 
             </StackPanel>
+            <StackPanel Orientation="Vertical" Name="filter4StackLabel">
+
+            </StackPanel>
             <StackPanel Orientation="Vertical" Name="filter4Stack">
 
             </StackPanel>
+            
         </StackPanel>
         <StackPanel Orientation="Vertical" Name="DevicesStack">
             

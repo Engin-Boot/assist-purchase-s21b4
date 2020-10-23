@@ -10,5 +10,12 @@ namespace DataModels
         public List<float> weight { get; set; }
         public List<string> batterycapacity { get; set; }
         public List<string> resolution { get; set; }
+        public FilterDataModel()
+        {
+            measurements = new List<string>();
+            weight = new List<float>();
+            batterycapacity = new List<string>();
+            resolution = new List<string>();
+        }
     }
 }

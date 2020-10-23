@@ -47,6 +47,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -57,6 +58,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataModels\weightRanges.cs" />
+    <Compile Include="LoadPrefereces\AutoCheck.cs" />
+    <Compile Include="LoadPrefereces\SavePreferences.cs" />
     <Compile Include="ServerConnection\GetDevices.cs" />
     <Compile Include="ServerConnection\GetFiltersOptions.cs" />
     <Page Include="MainWindow.xaml">
