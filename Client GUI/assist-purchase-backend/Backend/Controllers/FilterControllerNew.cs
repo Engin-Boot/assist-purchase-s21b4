@@ -36,10 +36,10 @@ namespace Backend.Controllers
         public JsonResult Put([FromBody] DataModels.FilterDataModel filters)
         {
             IEnumerable<DataModels.DeviceModel> db = this._repository.ApplyAllFiltersNew(filters);
-            foreach(var d in db)
-            {
-                Console.WriteLine(d.batterycapacity);
-            }
+            //foreach(var d in db)
+            //{
+            //    Console.WriteLine(d.batterycapacity);
+            //}
            
             return Json(db);
         }

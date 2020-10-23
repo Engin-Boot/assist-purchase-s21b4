@@ -105,12 +105,13 @@ namespace Backend.Repository
             }
             return true;
         }
-        public List<DataModels.DeviceModel> ApplyWeightFilterNew(List<float> w, List<DataModels.DeviceModel> d)
+        public List<DataModels.DeviceModel> ApplyWeightFilterNew(List<string> w, List<DataModels.DeviceModel> d)
         {
             if (w.Count > 0)
             {
                 //Console.WriteLine(d.Count);
-                return d.FindAll(device => weight_equals(device.weight,w));
+                
+                return d.FindAll(device => weight_in(device.weight,w));
                 
             }
             else
@@ -119,12 +120,14 @@ namespace Backend.Repository
             }
            
         }
-        public bool weight_equals(float actualweight,List<float> expectedWeight)
+        public bool weight_in(float actualweight,List<string> expectedWeight)
         {
             foreach(var w in expectedWeight)
             {
                 //Console.WriteLine(w);
-                if((actualweight - w) < 0.0000001 && (actualweight - w) > -0.0000001)
+                string[] l = w.Split('-');
+
+                if(actualweight<=int.Parse(l[1]) && actualweight>=int.Parse(l[0]))
                 {
                     //Console.WriteLine("in loop");
                     //Console.WriteLine(actualweight);

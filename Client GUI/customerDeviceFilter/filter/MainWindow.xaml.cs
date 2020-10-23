@@ -177,14 +177,16 @@ namespace filter
                 if ((bool)chk.IsChecked)
                 {
                     string a = chk.Content.ToString();
-                    string[] a1=a.Split(' ')[0].Split('-');
-                    addWeightFilter(int.Parse(a1[0]), int.Parse(a1[1]),PassedToStack2);
+                    string[] a1=a.Split(' ');
+                    //addWeightFilter(int.Parse(a1[0]), int.Parse(a1[1]),PassedToStack2);
+                    filters.weight.Add(a1[0]);
                 }
                 else
                 {
                     string a = chk.Content.ToString();
-                    string[] a1 = a.Split(' ')[0].Split('-');
-                    removeWeightFilter(int.Parse(a1[0]), int.Parse(a1[1]));
+                    string[] a1 = a.Split(' ');
+                    //removeWeightFilter(int.Parse(a1[0]), int.Parse(a1[1]));
+                    filters.weight.Remove(a1[0]);
                 }
                 
                 filters.resolution.Clear();
@@ -202,30 +204,30 @@ namespace filter
                 }
                 
             }
-            void addWeightFilter(int min,int max,DataModels.DeviceModel[] passed)
-            {
-                foreach(var d in passed)
-                {
-                    if(d.weight<=max && d.weight>=min)
-                    {
-                        if(!filters.weight.Contains(d.weight))
-                        {
-                            filters.weight.Add(d.weight);
-                        }
-                    }
-                }
-            }
-            void removeWeightFilter(int min, int max)
-            {
+            //void addWeightFilter(int min,int max,DataModels.DeviceModel[] passed)
+            //{
+            //    foreach(var d in passed)
+            //    {
+            //        if(d.weight<=max && d.weight>=min)
+            //        {
+            //            if(!filters.weight.Contains(d.weight))
+            //            {
+            //                filters.weight.Add(d.weight);
+            //            }
+            //        }
+            //    }
+            //}
+            //void removeWeightFilter(int min, int max)
+            //{
                 
-                foreach (var w in filters.weight.ToList())
-                {
-                    if (w<=max && w>=min)
-                    {
-                        filters.weight.Remove(w);
-                    }
-                }
-            }
+            //    foreach (var w in filters.weight.ToList())
+            //    {
+            //        if (w<=max && w>=min)
+            //        {
+            //            filters.weight.Remove(w);
+            //        }
+            //    }
+            //}
             
             void AddFilterStack3()
             {

@@ -56,10 +56,10 @@ namespace filter.LoadPrefereces
         {
             foreach (CheckBox el in MainWindow.AppWindow.filter2Stack.Children)
             {
-                string[] limits = el.Content.ToString().Split(' ')[0].Split('-');
+                string[] limits = el.Content.ToString().Split(' ');
                 foreach (var weight in f.weight)
                 {
-                    if (weight<=int.Parse(limits[1]) && weight >= int.Parse(limits[0]))
+                    if (weight.Equals(el.Content.ToString().Split(' ')[0]))
                     {
                         CheckBoxAutomationPeer peer = new CheckBoxAutomationPeer(el);
 

@@ -135,26 +135,21 @@ namespace Backend.Utility
 
         private static DataModels.FilterDataModel FormatStringToDeviceObject(string[] values)
         {
-            string[] w = values[2].Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            float[] weightInFloat = new float[w.Length];
-            for (int i = 0; i < w.Length; i++)
-            {
-                weightInFloat[i] = float.Parse(w[i]);
-            }
-            Console.WriteLine(values[4]);
+            
+           // Console.WriteLine(values[4]);
             DataModels.FilterDataModel filpre = new DataModels.FilterDataModel
             {
 
 
                 measurements = values[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
 
-                weight = weightInFloat.ToList(),
+                weight = values[2].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
                 resolution = values[3].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
                 
                 batterycapacity = values[4].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList()
 
             };
-            Console.WriteLine(filpre.batterycapacity.Count);
+            //Console.WriteLine(filpre.batterycapacity.Count);
             return filpre;
         }
 
