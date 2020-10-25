@@ -25,8 +25,7 @@ namespace filter.ServerConnection
 
                 System.Runtime.Serialization.Json.DataContractJsonSerializer _jsonSerializer =
                     new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(List<string>));
-                m =
-                              _jsonSerializer.ReadObject(response.GetResponseStream()) as List<string>;
+                m = _jsonSerializer.ReadObject(response.GetResponseStream()) as List<string>;
                 return m;
 
             }

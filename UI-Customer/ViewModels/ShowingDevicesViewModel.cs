@@ -12,20 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UI_Customer.ViewModels;
 
-namespace UI_Customer.Views
+using System.Net;
+using UI_Customer.DataModels;
+
+namespace UI_Customer.ViewModels
 {
-    /// <summary>
-    /// Interaction logic for HomePage1.xaml
-    /// </summary>
-    public partial class HomePage1 : UserControl
+    public class ShowingDevicesViewModel 
     {
-        HomePageViewModel _viewModel = new HomePageViewModel();
-        public HomePage1()
-        {
-            //InitializeComponent();
-            this.DataContext = _viewModel;
-        }
+       
+
     }
 }

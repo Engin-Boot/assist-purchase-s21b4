@@ -13,3 +13,18 @@ F:\philips pre-joining training\case study 2 part 2 AssistPurchase\customerDevic
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\customerDeviceFilter\filter\obj\Debug\filter.csproj.CoreCompileInputs.cache
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\customerDeviceFilter\filter\obj\Debug\filter.exe
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\customerDeviceFilter\filter\obj\Debug\filter.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\bin\Debug\filter.exe.config
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\bin\Debug\filter.exe
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\bin\Debug\filter.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.csprojAssemblyReference.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\MainWindow.g.cs
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\App.g.cs
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter_MarkupCompile.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter_MarkupCompile.lref
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\MainWindow.baml
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.g.resources
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.Properties.Resources.resources
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.csproj.GenerateResource.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.csproj.CoreCompileInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.exe
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\customerDeviceFilter\filter\obj\Debug\filter.pdb

@@ -5829,19 +5829,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ajinkya\\.nuget\\packages\\": {}
+    "C:\\Users\\MEITY\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\BackendTests\\BackendTests.csproj",
+      "projectUniqueName": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\BackendTests\\BackendTests.csproj",
       "projectName": "BackendTests",
-      "projectPath": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\BackendTests\\BackendTests.csproj",
-      "packagesPath": "C:\\Users\\Ajinkya\\.nuget\\packages\\",
-      "outputPath": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\BackendTests\\obj\\",
+      "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\BackendTests\\BackendTests.csproj",
+      "packagesPath": "C:\\Users\\MEITY\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\BackendTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ajinkya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MEITY\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5854,11 +5854,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\Backend\\Backend.csproj": {
-              "projectPath": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\Backend\\Backend.csproj"
+            "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\Backend\\Backend.csproj": {
+              "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\Backend\\Backend.csproj"
             },
-            "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\DataModels\\DataModels.csproj": {
-              "projectPath": "F:\\philips pre-joining training\\case study 2 part 2 AssistPurchase\\assist-purchase-backend\\DataModels\\DataModels.csproj"
+            "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\DataModels\\DataModels.csproj": {
+              "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Client GUI\\assist-purchase-backend\\DataModels\\DataModels.csproj"
             }
           }
         }
@@ -5945,7 +5945,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -48,7 +48,7 @@ namespace filter.ServerConnection
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
 
-                Console.WriteLine("Communication Successful");
+                //Console.WriteLine("Communication Successful");
                 Console.WriteLine(response.ContentType);
                 Console.WriteLine(response.ContentLength);
 

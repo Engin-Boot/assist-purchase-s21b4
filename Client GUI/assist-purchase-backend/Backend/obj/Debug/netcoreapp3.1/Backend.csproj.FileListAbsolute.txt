@@ -137,3 +137,32 @@ F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purcha
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.dll
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.exe
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.deps.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.runtimeconfig.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.runtimeconfig.dev.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Backend.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\DataModels.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\bin\Debug\netcoreapp3.1\DataModels.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.csprojAssemblyReference.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.AssemblyInfoInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.AssemblyInfo.cs
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.RazorTargetAssemblyInfo.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CopyComplete
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\staticwebassets\Backend.StaticWebAssets.Manifest.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\staticwebassets\Backend.StaticWebAssets.xml
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache

@@ -43,3 +43,12 @@ F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purcha
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.dll
 F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.csprojAssemblyReference.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\DataModels\obj\Debug\netstandard2.0\DataModels.pdb

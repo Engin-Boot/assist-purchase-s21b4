@@ -7,7 +7,7 @@ namespace Backend.Repository
 {
     public class DeviceFiltersRepository : IDeviceFiltersRepository
     {
-        static readonly string filepath = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\Devices.csv";
+        static readonly string filepath = @"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Devices.csv";
         readonly List<DataModels.DeviceModel> _filteredDevices = new DeviceRepository(filepath).GetAllDevices();
         public List<DataModels.DeviceModel> ApplyAllFilters(List<string> filters)
         {

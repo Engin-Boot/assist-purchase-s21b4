@@ -10,7 +10,7 @@ namespace Backend.Repository
         readonly static Utility.CsvInputHandler _csvHandler = new Utility.CsvInputHandler();
         public static List<string> getUniqueMeasurements()
         {
-            var deviceDb = _csvHandler.ReadFile(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\Devices.csv");
+            var deviceDb = _csvHandler.ReadFile(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Devices.csv");
             List<string> measurementNames = new List<string>();
             foreach(var f in deviceDb)
             {
