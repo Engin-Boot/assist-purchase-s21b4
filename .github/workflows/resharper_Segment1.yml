@@ -2,7 +2,7 @@ name: Resharper_Code_Analysis_Segment1
  
 on: 
     push:
-        branches: [master]
+        branches: [ main ]
  
 jobs:
   resharper:
