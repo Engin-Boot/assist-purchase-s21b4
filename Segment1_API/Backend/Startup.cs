@@ -18,10 +18,10 @@ namespace Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\Backend\Devices.csv"));
-            services.AddScoped<IDeviceFiltersRepository>(deviceFilterRepository => new DeviceFiltersRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\Backend\Devices.csv"));//, DeviceFiltersRepository >();
-            services.AddScoped<ICustomerFilterPreferencesRepository>(mailAlerterRepository => new CustomerFilterPreferencesRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\Backend\FilterPreferences.csv"));
-            services.AddScoped<IMailAlerterRepository>(mailAlerterRepository => new MailAlerterRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\Backend\Customers.csv"));
+            services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\Devices.csv"));
+            services.AddScoped<IDeviceFiltersRepository>(deviceFilterRepository => new DeviceFiltersRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\Devices.csv"));//, DeviceFiltersRepository >();
+            services.AddScoped<ICustomerFilterPreferencesRepository>(mailAlerterRepository => new CustomerFilterPreferencesRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\FilterPreferences.csv"));
+            services.AddScoped<IMailAlerterRepository>(mailAlerterRepository => new MailAlerterRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\Customers.csv"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

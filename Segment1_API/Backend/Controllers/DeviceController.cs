@@ -27,9 +27,9 @@ namespace Backend.Controllers
 
         }
         [HttpGet("{Id}")]
-        public DataModels.DeviceModel Get(string id)
+        public ActionResult Get(string id)
         {
-            return _repository.GetDevice(id);
+            return Json(_repository.GetDevice(id));
         }
         [HttpPost]
         public bool Post([FromBody] DataModels.DeviceModel device)

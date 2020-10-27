@@ -10,7 +10,7 @@ namespace BackendTests
     {
         private readonly ITestOutputHelper output;
 
-        readonly Backend.Controllers.DeviceController _controller = new Backend.Controllers.DeviceController(new Backend.Repository.DeviceRepository(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\BackendTests\TestDevices.csv"));
+        readonly Backend.Controllers.DeviceController _controller = new Backend.Controllers.DeviceController(new Backend.Repository.DeviceRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices.csv"));
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
             name = "IntelliVue MX300",
@@ -43,8 +43,7 @@ namespace BackendTests
         [Fact]
         public void TestExpectingADeviceWhenCalledWithValidStringId()
         {
-            DataModels.DeviceModel device = new DataModels.DeviceModel();
-            device = _controller.Get("VUEMX750");
+            DataModels.DeviceModel device = ((JsonResult)_controller.Get("VUEMX750")).Value as DataModels.DeviceModel;
             Assert.Equal("IntelliVue MX750", device.name);
         }
        [Fact]

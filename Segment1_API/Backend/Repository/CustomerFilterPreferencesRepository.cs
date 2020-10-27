@@ -8,8 +8,8 @@ namespace Backend.Repository
 {
     public class CustomerFilterPreferencesRepository : ICustomerFilterPreferencesRepository
     {
-        public readonly string _csvFilePath;// = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\Devices.csv";
-        
+        public readonly string _csvFilePath;// = @"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\Customers.csv";
+
         readonly static Utility.CustomerPreferenceFilterHandeler _csvHandler = new Utility.CustomerPreferenceFilterHandeler();
         public CustomerFilterPreferencesRepository(string filepath)
         {

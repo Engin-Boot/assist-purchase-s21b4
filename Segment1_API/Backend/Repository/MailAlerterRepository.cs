@@ -1,5 +1,6 @@
 ﻿using DataModels;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
@@ -88,6 +89,10 @@ namespace Backend.Repository
 
             smtp.Dispose();
             return sent;
+        }
+        public List<CustomerModel> GetAllCustomers()
+        {
+            return _csvHandler.ReadCustomerDetailsFromFile(_csvFilePath);
         }
     }
 }

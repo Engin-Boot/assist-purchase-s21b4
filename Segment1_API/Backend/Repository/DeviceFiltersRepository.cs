@@ -8,7 +8,7 @@ namespace Backend.Repository
     public class DeviceFiltersRepository : IDeviceFiltersRepository
     {
 
-        public readonly string _csvFilePath;// = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\Devices.csv";
+        public readonly string _csvFilePath;// = @"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\Backend\Devices.csv";
         readonly List<DataModels.DeviceModel> _filteredDevices = new List<DataModels.DeviceModel>();
         readonly static Utility.CsvInputHandler _csvHandler = new Utility.CsvInputHandler();
         public DeviceFiltersRepository(string filepath)

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qaR/GRzH64FPSeLl4jRBajRtA0dwjiaB5e//7RPMP4r4YOOWw4C2H+yBQKvJSdv+Vp13hyOUrs4DQxiZW9NXGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ekta\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ekta\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

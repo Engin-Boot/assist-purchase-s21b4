@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\
 UI_Customer
 none
 false
 DEBUG;TRACE
-C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\App.xaml
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Customer\App.xaml
 5-1968234081
 
 19-40591442
 15-1817220224
 MainWindow.xaml;Resources\CommonTextBlockDesign.xaml;Resources\HeaderFooterDesign.xaml;Views\ShowingDevices.xaml;Views\TakingCustomerDetails.xaml;
 
-False
+True
 

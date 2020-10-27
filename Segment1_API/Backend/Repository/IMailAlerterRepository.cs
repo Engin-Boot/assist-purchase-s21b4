@@ -1,4 +1,5 @@
 ﻿using DataModels;
+using System.Collections.Generic;
 
 namespace Backend.Repository
 {
@@ -8,5 +9,6 @@ namespace Backend.Repository
         bool DeleteCustomerDetails(string id);
         CustomerModel FindCustomer(string customerId);
         bool SendEmail(CustomerModel customer);
+        List<CustomerModel> GetAllCustomers();
     }
 }

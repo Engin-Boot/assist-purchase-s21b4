@@ -1,0 +1,15 @@
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\bin\Debug\Employee-App.exe.config
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\bin\Debug\Employee-App.exe
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\bin\Debug\Employee-App.pdb
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.csprojAssemblyReference.cache
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\MainWindow.g.cs
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\App.g.cs
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App_MarkupCompile.cache
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App_MarkupCompile.lref
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\MainWindow.baml
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.g.resources
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee_App.Properties.Resources.resources
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.csproj.GenerateResource.cache
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.csproj.CoreCompileInputs.cache
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.exe
+C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment2_GUI\UI-Employee\Employee-App\obj\Debug\Employee-App.pdb
