@@ -9,7 +9,7 @@ namespace BackendTests
 {
     public class CustomerFilterPreferencesControllerTests
     {
-        readonly Backend.Controllers.CustomerFilterPreferencesController _controller = new Backend.Controllers.CustomerFilterPreferencesController(new Backend.Repository.CustomerFilterPreferencesRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\BackendTests\TestFilterPreferences.csv"));
+        readonly Backend.Controllers.CustomerFilterPreferencesController _controller = new Backend.Controllers.CustomerFilterPreferencesController(new Backend.Repository.CustomerFilterPreferencesRepository(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\BackendTests\TestFilterPreferences.csv"));
         
         [Fact]
         public void WhenWantPreferencesThenReturnCustomerPreferences()

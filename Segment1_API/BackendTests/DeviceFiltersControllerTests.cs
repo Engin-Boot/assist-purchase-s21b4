@@ -9,7 +9,7 @@ namespace BackendTests
     {
         private readonly ITestOutputHelper output;
 
-        readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices.csv"));
+        readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\BackendTests\TestDevices.csv"));
         public DeviceFiltersControllerTests(ITestOutputHelper output)
         {
             this.output = output;
