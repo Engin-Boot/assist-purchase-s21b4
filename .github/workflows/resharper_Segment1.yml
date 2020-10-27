@@ -1,4 +1,4 @@
-name: Resharper Code Analysis
+name: Resharper_Code_Analysis_Segment1
  
 on: 
     push:

@@ -1,5 +1,5 @@
-name: Coverage
- 
+name: Coverage_Segment1
+
 on: 
     push:
         branches: [main]

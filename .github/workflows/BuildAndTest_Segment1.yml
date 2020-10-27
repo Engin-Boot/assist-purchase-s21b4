@@ -1,4 +1,4 @@
-name: AssistPurchase
+name: BuildAndTest_Segment1
 
 on:
   push:
