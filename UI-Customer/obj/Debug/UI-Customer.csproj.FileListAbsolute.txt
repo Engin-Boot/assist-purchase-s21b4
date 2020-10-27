@@ -18,3 +18,5 @@ C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\Views\ShowingDevices.
 C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\Views\ShowingDevices.baml
 C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\UI-Customer.csprojAssemblyReference.cache
 C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\Resources\CommonTextBlockDesign.baml
+C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\Views\TakingCustomerDetails.g.cs
+C:\Users\MEITY\assist-purchase-s21b4\UI-Customer\obj\Debug\Views\TakingCustomerDetails.baml

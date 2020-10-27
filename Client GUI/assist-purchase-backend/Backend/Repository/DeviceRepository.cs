@@ -5,7 +5,7 @@ namespace Backend.Repository
 {
     public class DeviceRepository : IDeviceRepository
     {
-        private readonly string _csvFilePath;
+        private readonly string _csvFilePath = @"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Devices.csv";
         readonly Utility.CsvInputHandler _csvHandler = new Utility.CsvInputHandler();
         public DeviceRepository(string filepath)
         {

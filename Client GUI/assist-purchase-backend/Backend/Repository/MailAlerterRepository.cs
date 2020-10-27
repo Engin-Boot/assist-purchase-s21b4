@@ -9,7 +9,8 @@ namespace Backend.Repository
 {
     public class MailAlerterRepository : IMailAlerterRepository
     {
-        private readonly string _csvFilePath;
+
+        readonly string _csvFilePath;
         readonly Utility.CustomerDataBaseHandler _csvHandler = new Utility.CustomerDataBaseHandler();
 
         public MailAlerterRepository(string filepath)
@@ -23,7 +24,7 @@ namespace Backend.Repository
                 return _csvHandler.WriteToFile(customer, _csvFilePath);
             }
             else
-            {
+           {
                 _csvHandler.DeleteFromFile(FindCustomer(customer.CustomerId).CustomerId,_csvFilePath);
                 return _csvHandler.WriteToFile(customer, _csvFilePath);
             }
@@ -56,7 +57,7 @@ namespace Backend.Repository
             messageBody.Append("Device Id: " + customer.DeviceId);
 
             string fromaddr = "s21b4.assistpurchase@gmail.com";
-            string toaddr = "ajinkyaghatol22@gmail.com";//TO ADDRESS HERE
+            string toaddr = "muskan.0135@gmail.com";//TO ADDRESS HERE
             string password = "S21B4@casestudy2";
 
             MailMessage msg = new MailMessage

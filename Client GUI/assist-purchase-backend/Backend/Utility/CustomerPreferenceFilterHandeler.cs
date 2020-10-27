@@ -24,7 +24,7 @@ namespace Backend.Utility
             try
             {
                 isDeleted = ReadLinesFromFile(ip, preferences);
-                WriteLinesToFile(preferences, @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\FilterPreferences.csv");
+                WriteLinesToFile(preferences, @"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\FilterPreferences.csv");
 
             }
             catch (Exception e)
@@ -48,7 +48,7 @@ namespace Backend.Utility
         {
             int lineCounter = 0;
 
-            using var reader = new StreamReader(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\FilterPreferences.csv");
+            using var reader = new StreamReader(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\FilterPreferences.csv");
             string line;
             while ((line = reader.ReadLine()) != null)
             {
@@ -88,7 +88,7 @@ namespace Backend.Utility
 
             if (!string.IsNullOrEmpty(csvFormatData))
             {
-                File.AppendAllText(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\FilterPreferences.csv", csvFormatData);
+                File.AppendAllText(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\FilterPreferences.csv", csvFormatData);
                 isWritten = true;
             }
             return isWritten;
@@ -99,7 +99,7 @@ namespace Backend.Utility
             DataModels.FilterDataModel preferences = new DataModels.FilterDataModel();
             try
             {
-                preferences = WriteObjectsToList(ip, @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\assist-purchase-backend\Backend\FilterPreferences.csv");
+                preferences = WriteObjectsToList(ip, @"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\FilterPreferences.csv");
                 
             }
             catch (Exception e)

@@ -26,18 +26,30 @@
                              Margin="8" Click="Assistant_Click">
                 </Button>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                
+                <StackPanel Orientation="Vertical" Name="filter1StackLabel">
 
-                <StackPanel Orientation="Horizontal" Name="filter1Stack"  >
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Name="filter1Stack"  >
                    
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Name="filter2Stack"  >
+                <StackPanel Orientation="Horizontal" Name="filter2StackLabel">
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Name="filter3Stack" >
+                <StackPanel Orientation="Vertical" Name="filter2Stack"  >
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Name="filter4Stack" >
+                <StackPanel Orientation="Horizontal" Name="filter3StackLabel">
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Name="filter3Stack" >
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Name="filter4StackLabel">
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Name="filter4Stack" >
 
                 </StackPanel>
                 </StackPanel>
@@ -45,6 +57,7 @@
             <StackPanel Orientation="Horizontal" Name="DevicesStack" HorizontalAlignment="Left">
 
             </StackPanel>
+            
         </StackPanel>
     </ScrollViewer>
 </UserControl>

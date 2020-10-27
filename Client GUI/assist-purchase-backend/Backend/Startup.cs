@@ -20,7 +20,7 @@ namespace Backend
             services.AddControllers();
             services.AddScoped<IDeviceRepository>(deviceRepository => new DeviceRepository(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Devices.csv"));
             services.AddScoped<IDeviceFiltersRepository, DeviceFiltersRepository>();
-            services.AddScoped<IMailAlerterRepository>(mailAlerterRepository => new MailAlerterRepository(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Devices.csv"));
+            services.AddScoped<IMailAlerterRepository>(mailAlerterRepository => new MailAlerterRepository(@"C:\Users\MEITY\assist-purchase-s21b4\Client GUI\assist-purchase-backend\Backend\Customers.csv"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,6 +14,17 @@ namespace Backend.Controllers
             _mailAlerterRespository = customerRepository;
         }
 
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public IActionResult Getbyid(string id)
+        {
+            var result = _mailAlerterRespository.FindCustomer(id);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
 
         // POST api/<CustomerAlertController>
         [HttpPost("alert")]

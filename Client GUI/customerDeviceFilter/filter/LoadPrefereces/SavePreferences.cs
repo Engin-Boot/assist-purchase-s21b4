@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace filter.LoadPrefereces
+namespace UI_Customer.LoadPrefereces
 {
     public static class SavePreferences
     {

@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-
-using System.Windows;
-
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
+﻿using System.Windows.Controls;
 using System.Windows.Automation.Peers;
+using UI_Customer.Views;
 using System.Windows.Automation.Provider;
 
-namespace filter.LoadPrefereces
+namespace UI_Customer.LoadPrefereces
 {
     public static class AutoCheck
     {
+        
         public static void fun(DataModels.FilterDataModel f)
         {
             //CheckBox cb1 = new CheckBox();
@@ -34,8 +24,9 @@ namespace filter.LoadPrefereces
         }
         public static void autoCheckMeasurements(DataModels.FilterDataModel f)
         {
-            
-            foreach (CheckBox el in MainWindow.AppWindow.filter1Stack.Children)
+            ShowingDevices _showingDevicesobj = new ShowingDevices();
+
+            foreach (CheckBox el in _showingDevicesobj.filter1Stack.Children)
             {
                 foreach (var fil in f.measurements)
                 {
@@ -54,7 +45,8 @@ namespace filter.LoadPrefereces
         }
         public static void autoCheckWeight(DataModels.FilterDataModel f)
         {
-            foreach (CheckBox el in MainWindow.AppWindow.filter2Stack.Children)
+            ShowingDevices _showingDevicesobj = new ShowingDevices();
+            foreach (CheckBox el in _showingDevicesobj.filter2Stack.Children)
             {
                 string[] limits = el.Content.ToString().Split(' ');
                 foreach (var weight in f.weight)
@@ -74,7 +66,8 @@ namespace filter.LoadPrefereces
         }
         public static void autoCheckResolution(DataModels.FilterDataModel f)
         {
-            foreach (CheckBox el in MainWindow.AppWindow.filter3Stack.Children)
+            ShowingDevices _showingDevicesobj = new ShowingDevices();
+            foreach (CheckBox el in _showingDevicesobj.filter3Stack.Children)
             {
                 foreach (var fil in f.resolution)
                 {
@@ -93,7 +86,8 @@ namespace filter.LoadPrefereces
         }
         public static void autoCheckBatteryCapacity(DataModels.FilterDataModel f)
         {
-            foreach (CheckBox el in MainWindow.AppWindow.filter4Stack.Children)
+            ShowingDevices _showingDevicesobj = new ShowingDevices();
+            foreach (CheckBox el in _showingDevicesobj.filter4Stack.Children)
             {
                 foreach (var fil in f.batterycapacity)
                 {

@@ -69,6 +69,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -78,13 +79,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="..\Client GUI\customerDeviceFilter\filter\LoadPrefereces\AutoCheck.cs">
+      <Link>LoadPrefereces\AutoCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\Client GUI\customerDeviceFilter\filter\LoadPrefereces\SavePreferences.cs">
+      <Link>LoadPrefereces\SavePreferences.cs</Link>
+    </Compile>
+    <Compile Include="DataModels\CustomerModel.cs" />
     <Compile Include="DataModels\FilterDataModel.cs" />
     <Compile Include="DataModels\weightRanges.cs" />
+    <Compile Include="ServerConnection\AddCustomerDetails.cs" />
     <Compile Include="ServerConnection\GetDevices.cs" />
     <Compile Include="ServerConnection\GetFiltersOptions.cs" />
     <Compile Include="ViewModels\ShowingDevicesViewModel.cs" />
+    <Compile Include="ViewModels\TakingCustomerDetailsViewModel.cs" />
     <Compile Include="Views\ShowingDevices.xaml.cs">
       <DependentUpon>ShowingDevices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TakingCustomerDetails.xaml.cs">
+      <DependentUpon>TakingCustomerDetails.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShowingDevices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TakingCustomerDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
