@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {}
+    "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {
+    "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
+        "projectUniqueName": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
         "projectName": "DataModels",
-        "projectPath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
-        "packagesPath": "C:\\Users\\Ekta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\obj\\",
+        "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
+        "packagesPath": "C:\\Users\\MEITY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ekta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MEITY\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

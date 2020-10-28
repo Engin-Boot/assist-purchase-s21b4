@@ -57,7 +57,7 @@ namespace Backend.Repository
             messageBody.Append("Device Id: " + customer.DeviceId);
 
             string fromaddr = "s21b4.assistpurchase@gmail.com";
-            string toaddr = "ajinkyaghatol22@gmail.com";//TO ADDRESS HERE
+            string toaddr = "muskan.0135@gmail.com";//TO ADDRESS HERE
             string password = "S21B4@casestudy2";
 
             MailMessage msg = new MailMessage

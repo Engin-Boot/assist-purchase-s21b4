@@ -3724,19 +3724,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ekta\\.nuget\\packages\\": {}
+    "C:\\Users\\MEITY\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\Ekta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\Backend\\obj\\",
+      "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\MEITY\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ekta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MEITY\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3749,8 +3749,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {
-              "projectPath": "C:\\Users\\Ekta\\Desktop\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj"
+            "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj": {
+              "projectPath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj"
             }
           }
         }

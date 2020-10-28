@@ -6,3 +6,4 @@ ipAddress,Measurements,weights,resolutions,batterycapacity
 1280,ECG SPO2 NiBP,1.8 3 30 5,620x1080,45 50
 192.168.2.9,Pulse,1-10,,
 192.168.2.12,SPO2 Pulse,1-10 21-30,1920x1080 620x1080,7
+192.168.0.112,Respiration SPO2,,,
