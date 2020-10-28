@@ -49,13 +49,13 @@ namespace Backend.Utility
         }
         private void ReadLinesFromFileAndDeleteIfAvailable(string ip, List<string> preferences,string filepath)
         {
-            int lineCounter = 0;
+            //int lineCounter = 0;
 
             using var reader = new StreamReader(filepath);
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-                lineCounter++;
+                //lineCounter++;
                 var values = line.Split(',');
                 if (!ip.Equals(values[0]))
                 {

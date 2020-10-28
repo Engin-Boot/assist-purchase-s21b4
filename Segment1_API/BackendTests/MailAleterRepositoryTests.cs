@@ -8,6 +8,7 @@ namespace BackendTests
     public class MailAleterRepositoryTests
     {
         readonly IMailAlerterRepository _mailAlerterRepository = new MailAlerterRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestCustomers2.csv");
+        //readonly IMailAlerterRepository _mailAlerterRepository = new MailAlerterRepository(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\git exact copy\Segment1_API\BackendTests\TestCustomers2.csv");
         [Fact]
         public void TestExpectingCustomerToBeAddedIfItDoesnotExist()
         {

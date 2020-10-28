@@ -8,6 +8,7 @@ namespace BackendTests
     public class DeviceRepositoryTests
     {
         static readonly string filepath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices3.csv";
+        //static readonly string filepath = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\git exact copy\Segment1_API\BackendTests\TestDevices3.csv";
         readonly DeviceRepository _deviceRepository = new DeviceRepository(filepath);
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {

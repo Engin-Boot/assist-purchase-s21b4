@@ -10,6 +10,7 @@ namespace BackendTests
         //private readonly ITestOutputHelper output;
 
         readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices2.csv"));
+        //readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\git exact copy\Segment1_API\BackendTests\TestDevices2.csv"));
         //public DeviceFiltersControllerTests(ITestOutputHelper output)
         //{
         //    this.output = output;
@@ -32,29 +33,30 @@ namespace BackendTests
         [Fact]
         public void WhenWantFiteredDevicesThenGetFilteredDevices()
         {
-            var _filterPreferences = new DataModels.FilterDataModel
+            var filterPreferences = new DataModels.FilterDataModel
             {
-                measurements = new List<string>{"ECG", "SPO2", "Respiration", "NiBP", "Pulse"},
+                measurements = new List<string>{"ECG", "SPO2", "Respiration", "NiBP"},
                 weight = new List<string>(),
                 resolution = new List<string>(),
-                batterycapacity = new List<string>()
+                batterycapacity = new List<string> { "7"}
             };
-            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(_filterPreferences)).Value as List<DataModels.DeviceModel>;
-            Assert.True(viewModel.Count == 1);
-            Assert.True(viewModel[0].id.Equals("VUEMX500"));
+            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(filterPreferences)).Value as List<DataModels.DeviceModel>;
+           
+            Assert.True(viewModel[0].id.Equals("VUEMX750"));
+            Assert.True(viewModel.Count == 2);
         }
         [Fact]
         public void WhenWantFiteredDevicesThenGetFilteredDevices1()
         {
             
-            var _filterPreferences = new DataModels.FilterDataModel
+            var filterPreferences = new DataModels.FilterDataModel
             {
                 measurements = new List<string> { "ECG", "SPO2", "Respiration", "NiBP", "Pulse" },
                 weight = new List<string> { "1-10"},
                 resolution = new List<string> { "1920x1080"},
                 batterycapacity = new List<string> { "7"}
             };
-            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(_filterPreferences)).Value as List<DataModels.DeviceModel>;
+            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(filterPreferences)).Value as List<DataModels.DeviceModel>;
             Assert.True(viewModel.Count == 1);
             Assert.True(viewModel[0].id.Equals("VUEMX500"));
         }
@@ -62,28 +64,28 @@ namespace BackendTests
         public void WhenWantFiteredDevicesThenGetFilteredDevices2()
         {
 
-            var _filterPreferences = new DataModels.FilterDataModel
+            var filterPreferences = new DataModels.FilterDataModel
             {
                 measurements = new List<string> { "ECG"},
                 weight = new List<string> { "1-10" },
                 resolution = new List<string> { "1920x1080","670x480" },
                 batterycapacity = new List<string> { "7" ,"8"}
             };
-            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(_filterPreferences)).Value as List<DataModels.DeviceModel>;
+            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(filterPreferences)).Value as List<DataModels.DeviceModel>;
             Assert.True(viewModel.Count == 2);
             
         }
         [Fact]
         public void WhenFilterIsEmptyThenGetAllDevices()
         {
-            var _filterPreferences = new DataModels.FilterDataModel
+            var filterPreferences = new DataModels.FilterDataModel
             {
                 measurements = new List<string>(),
                 weight = new List<string>(),
                 resolution = new List<string>(),
                 batterycapacity = new List<string>()
             };
-            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(_filterPreferences)).Value as List<DataModels.DeviceModel>;
+            List<DataModels.DeviceModel> viewModel = ((JsonResult)_controller.Put(filterPreferences)).Value as List<DataModels.DeviceModel>;
             Assert.True(viewModel.Count == 3);
            
         }

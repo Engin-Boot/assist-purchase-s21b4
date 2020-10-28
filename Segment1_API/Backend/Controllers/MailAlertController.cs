@@ -21,7 +21,7 @@ namespace Backend.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            IEnumerable<DataModels.CustomerModel> dbAllCustomers = this._mailAlerterRespository.GetAllCustomers();
+            IEnumerable<CustomerModel> dbAllCustomers = this._mailAlerterRespository.GetAllCustomers();
             return Json(dbAllCustomers);
         }
 

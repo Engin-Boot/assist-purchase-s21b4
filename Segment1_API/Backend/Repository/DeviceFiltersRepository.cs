@@ -9,7 +9,7 @@ namespace Backend.Repository
     {
 
         private readonly string _csvFilePath;
-        readonly List<DataModels.DeviceModel> _filteredDevices = new List<DataModels.DeviceModel>();
+        readonly List<DeviceModel> _filteredDevices;
         static readonly Utility.CsvInputHandler CsvHandler = new Utility.CsvInputHandler();
         public DeviceFiltersRepository(string filepath)
         {
@@ -41,7 +41,7 @@ namespace Backend.Repository
             var filter4 = ApplyBatteryCapacityFilter(filters.batterycapacity, filter3);
             return filter4;
         }
-        private List<DataModels.DeviceModel> ApplyMeasurementsFilter(List<string> expectedMeasurements,List<DataModels.DeviceModel> devices)
+        private List<DeviceModel> ApplyMeasurementsFilter(List<string> expectedMeasurements,List<DeviceModel> devices)
         {
             if(expectedMeasurements.Count>0)
             {
@@ -63,7 +63,7 @@ namespace Backend.Repository
             }
             return true;
         }
-        private List<DataModels.DeviceModel> ApplyWeightFilter(List<string> expectedWeight, List<DataModels.DeviceModel> devices)
+        private List<DeviceModel> ApplyWeightFilter(List<string> expectedWeight, List<DeviceModel> devices)
         {
             if (expectedWeight.Count > 0)
             {
@@ -87,7 +87,7 @@ namespace Backend.Repository
             }
             return false;
         }
-        private List<DataModels.DeviceModel> ApplyResolutionFilter(List<string> expectedResolution, List<DataModels.DeviceModel> devices)
+        private List<DeviceModel> ApplyResolutionFilter(List<string> expectedResolution, List<DeviceModel> devices)
         {
             if(expectedResolution.Count > 0)
             {
@@ -110,7 +110,7 @@ namespace Backend.Repository
             return false;
         }
 
-        private List<DataModels.DeviceModel> ApplyBatteryCapacityFilter(List<string> expectedBattery, List<DataModels.DeviceModel> devices)
+        private List<DeviceModel> ApplyBatteryCapacityFilter(List<string> expectedBattery, List<DeviceModel> devices)
         {
             if (expectedBattery.Count > 0)
             {
