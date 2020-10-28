@@ -1,7 +1,7 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+
 using Microsoft.AspNetCore.Mvc;
 using DataModels;
 
@@ -21,8 +21,8 @@ namespace Backend.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            IEnumerable<DataModels.CustomerModel> db = this._mailAlerterRespository.GetAllCustomers();
-            return Json(db);
+            IEnumerable<DataModels.CustomerModel> dbAllCustomers = this._mailAlerterRespository.GetAllCustomers();
+            return Json(dbAllCustomers);
         }
 
         // POST api/<CustomerAlertController>

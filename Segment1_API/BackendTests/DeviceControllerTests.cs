@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
+
 using System.Collections.Generic;
 using Xunit;
-using Xunit.Abstractions;
+
 namespace BackendTests
 {
     public class DeviceControllerTests
     {
-        private readonly ITestOutputHelper output;
+        //private readonly ITestOutputHelper output;
 
-        readonly Backend.Controllers.DeviceController _controller = new Backend.Controllers.DeviceController(new Backend.Repository.DeviceRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices.csv"));
+        readonly Backend.Controllers.DeviceController _controller = new Backend.Controllers.DeviceController(new Backend.Repository.DeviceRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices1.csv"));
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
             name = "IntelliVue MX300",
@@ -21,10 +21,10 @@ namespace BackendTests
             resolution = "1090 x 1020",
             weight = 1.2f,
         };
-        public DeviceControllerTests(ITestOutputHelper output)
-        {
-            this.output = output;
-        }
+        //public DeviceControllerTests(ITestOutputHelper output)
+        //{
+        //    this.output = output;
+        //}
         
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()

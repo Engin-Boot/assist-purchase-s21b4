@@ -12,7 +12,7 @@ namespace BackendTests
             CustomerContact = "12345678",
             DeviceId = "VUEX3"
         };
-        readonly Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new Backend.Repository.MailAlerterRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestCustomers.csv"));
+        readonly Backend.Controllers.MailAlertController _controller = new Backend.Controllers.MailAlertController(new Backend.Repository.MailAlerterRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestCustomers1.csv"));
         [Fact]
         public void TestExpectingNewCustomerToBeAddedIfItDoesnotExist()
         {

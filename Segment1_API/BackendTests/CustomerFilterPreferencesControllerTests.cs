@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
+
 using System.Collections.Generic;
 using Xunit;
-using Xunit.Abstractions;
+
 
 namespace BackendTests
 {
     public class CustomerFilterPreferencesControllerTests
     {
-        readonly Backend.Controllers.CustomerFilterPreferencesController _controller = new Backend.Controllers.CustomerFilterPreferencesController(new Backend.Repository.CustomerFilterPreferencesRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestFilterPreferences.csv"));
+        readonly Backend.Controllers.CustomerFilterPreferencesController _controller = new Backend.Controllers.CustomerFilterPreferencesController(new Backend.Repository.CustomerFilterPreferencesRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestFilterPreferences1.csv"));
         
         [Fact]
         public void WhenWantPreferencesThenReturnCustomerPreferences()
@@ -23,14 +23,14 @@ namespace BackendTests
         [Fact]
         public void WhenWantToSavePreferencesThenSavePreferences()
         {
-            var _filterPreferences = new DataModels.FilterDataModel
+            var filterPreferences = new DataModels.FilterDataModel
             {
                 measurements = new List<string> { "ECG", "SPO2", "Respiration", "NiBP", "Pulse" },
                 weight = new List<string>(),
                 resolution = new List<string>(),
                 batterycapacity = new List<string>()
             };
-            bool status = (bool)((JsonResult)_controller.Post("1281", _filterPreferences)).Value;
+            bool status = bool.Parse(((JsonResult)_controller.Post("1281", filterPreferences)).Value.ToString());
             Assert.True(status);
         }
     }

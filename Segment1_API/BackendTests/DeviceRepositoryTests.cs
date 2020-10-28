@@ -7,7 +7,7 @@ namespace BackendTests
 {
     public class DeviceRepositoryTests
     {
-        static readonly string filepath = @"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices.csv";
+        static readonly string filepath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices3.csv";
         readonly DeviceRepository _deviceRepository = new DeviceRepository(filepath);
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
@@ -91,8 +91,8 @@ namespace BackendTests
         [Fact]
         public void TestExpectingDeviceToBeUpdatedFromTheListWhenCalledWithStringId()
         {
-            DataModels.DeviceModel tempDevice = new DataModels.DeviceModel();
-             tempDevice= _deviceRepository.GetDevice("VUEX3");
+            DataModels.DeviceModel tempDevice = _deviceRepository.GetDevice("VUEX3");
+
             tempDevice.batterycapacity = "10";
             _deviceRepository.UpdateDevice("VUEX3",tempDevice);
             Assert.Equal("10", _deviceRepository.GetDevice("VUEX3").batterycapacity);

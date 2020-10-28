@@ -7,6 +7,6 @@ namespace Backend.Repository
     {
 
         List<DeviceModel> ApplyAllFilters(DataModels.FilterDataModel filters);
-        List<string> getUniqueMeasurements();
+        List<string> GetUniqueMeasurements();
     }
 }

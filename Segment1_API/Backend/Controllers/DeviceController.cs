@@ -17,11 +17,6 @@ namespace Backend.Controllers
         public ActionResult Get()
         {
             IEnumerable<DataModels.DeviceModel> db = this._repository.GetAllDevices();
-            //Console.WriteLine(db.ToString());
-            //foreach(var v in db)
-            //{
-            //    Console.WriteLine(v.mrn);
-            //}
             return Json(db);
             
 

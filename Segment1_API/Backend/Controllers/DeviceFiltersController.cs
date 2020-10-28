@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
+
 using Backend.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,8 +24,7 @@ namespace Backend.Controllers
         [Route("measurements")]
         public ActionResult Get()
         {
-            var m = _deviceFilterRepository.getUniqueMeasurements();
-            //var m = Repository.MeasurementFilterOptions.getUniqueMeasurements();
+            var m = _deviceFilterRepository.GetUniqueMeasurements();
             return Json(m);
         }
         

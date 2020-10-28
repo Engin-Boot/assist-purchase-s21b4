@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Backend.Utility
 {
@@ -11,22 +11,22 @@ namespace Backend.Utility
         
        
         
-        public bool saveToCsv(string ip,DataModels.FilterDataModel fil,string filepath)
+        public bool SaveToCsv(string ip,DataModels.FilterDataModel fil,string filepath)
         {
-            bool isWritten = false;
-            
             DeleteFromFile(ip,filepath);
-            isWritten= AddToCsv(ip, fil,filepath);
+            bool isWritten = AddToCsv(ip, fil, filepath);
             return isWritten;
+        
+        
         }
-        public bool DeleteFromFile(string ip,string filepath)
+        private void DeleteFromFile(string ip,string filepath)
         {
-            bool isDeleted = false;
+            //bool isDeleted = false;
 
             List<string> preferences = new List<string>();
             try
             {
-                isDeleted = ReadLinesFromFileAndDeleteIfAvailable(ip, preferences,filepath);
+                /*isDeleted =*/ ReadLinesFromFileAndDeleteIfAvailable(ip, preferences,filepath);
                 WriteLinesToFile(preferences, filepath);
 
             }
@@ -35,7 +35,7 @@ namespace Backend.Utility
                 Console.WriteLine(e.Message);
             }
 
-            return isDeleted;
+            //return isDeleted;
 
         }
         private void WriteLinesToFile(List<string> preferences, string filepath)
@@ -47,7 +47,7 @@ namespace Backend.Utility
 
             }
         }
-        private bool ReadLinesFromFileAndDeleteIfAvailable(string ip, List<string> preferences,string filepath)
+        private void ReadLinesFromFileAndDeleteIfAvailable(string ip, List<string> preferences,string filepath)
         {
             int lineCounter = 0;
 
@@ -62,16 +62,16 @@ namespace Backend.Utility
                     preferences.Add(line);
                 }
             }
-            bool isDeleted = CompareDataListsAfterDelete(lineCounter, preferences);
+            //bool isDeleted = CompareDataListsAfterDelete(lineCounter, preferences);
 
-            return isDeleted;
+            //return isDeleted;
         }
-        private bool CompareDataListsAfterDelete(int lineCounter, List<string> devices)
-        {
+        //private bool CompareDataListsAfterDelete(int lineCounter, List<string> devices)
+        //{
 
-            return lineCounter != devices.Count;
-        }
-        public bool AddToCsv(string ip, DataModels.FilterDataModel fil,string filepath)
+        //    return lineCounter != devices.Count;
+        //}
+        private bool AddToCsv(string ip, DataModels.FilterDataModel fil,string filepath)
         {
             bool isWritten = false;
             string csvFormatData = null;
@@ -102,7 +102,7 @@ namespace Backend.Utility
             DataModels.FilterDataModel preferences = new DataModels.FilterDataModel();
             try
             {
-                preferences = WriteObjectsToList(ip, filepath);
+                preferences = WritePreferenceObjectsToList(ip, filepath);
                 
             }
             catch (Exception e)
@@ -112,7 +112,7 @@ namespace Backend.Utility
             return preferences;
 
         }
-        private DataModels.FilterDataModel WriteObjectsToList(string ip, string filepath)
+        private DataModels.FilterDataModel WritePreferenceObjectsToList(string ip, string filepath)
         {
             DataModels.FilterDataModel filterPreference = new DataModels.FilterDataModel();
             using var reader = new StreamReader(filepath);
@@ -120,8 +120,7 @@ namespace Backend.Utility
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                if (line != null)
-                {
+                
                     var values = line.Split(',');
                     if(ip.Equals(values[0]))
                     {
@@ -129,13 +128,13 @@ namespace Backend.Utility
                         return filterPreference;
                     }
                     
-                }
+                
 
 
             }
             return filterPreference;
         }
-
+        
         private DataModels.FilterDataModel FormatStringToDeviceObject(string[] values)
         {
             

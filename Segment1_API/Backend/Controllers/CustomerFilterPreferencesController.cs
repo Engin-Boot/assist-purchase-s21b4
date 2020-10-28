@@ -1,9 +1,6 @@
 ﻿using Backend.Repository;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Backend.Controllers
 {
@@ -23,20 +20,17 @@ namespace Backend.Controllers
         [Route("{ip}")]
         public ActionResult Get(string ip)
         {
-            DataModels.FilterDataModel db = _repository.getCustomerPreferencesByIP(ip);
+            DataModels.FilterDataModel db = _repository.GetCustomerPreferencesByIp(ip);
             return Json(db);
         }
 
-        //http://localhost:5000/api/filter
         [HttpPost]
         [Route("{ipAddress}")]
 
         public ActionResult Post(string ipAddress, [FromBody] DataModels.FilterDataModel filters)
         {
-            bool s = _repository.saveCustomerPreferencesToFile(ipAddress,filters);
-            //bool s = Utility.CustomerPreferenceFilterHandeler.saveToCsv(ipAddress, filters);
-            s.ToString();
-            return Json(s);
+            return Json(_repository.SaveCustomerPreferencesToFile(ipAddress,filters));
+            
         }
     }
 }

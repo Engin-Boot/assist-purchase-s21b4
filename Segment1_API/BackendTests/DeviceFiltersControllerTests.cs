@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
+
 using Xunit;
-using Xunit.Abstractions;
+
 namespace BackendTests
 {
     public class DeviceFiltersControllerTests
     {
-        private readonly ITestOutputHelper output;
+        //private readonly ITestOutputHelper output;
 
-        readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"C:\Users\Ekta\Desktop\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices.csv"));
-        public DeviceFiltersControllerTests(ITestOutputHelper output)
-        {
-            this.output = output;
-        }
+        readonly Backend.Controllers.DeviceFiltersController _controller = new Backend.Controllers.DeviceFiltersController(new Backend.Repository.DeviceFiltersRepository(@"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices2.csv"));
+        //public DeviceFiltersControllerTests(ITestOutputHelper output)
+        //{
+        //    this.output = output;
+        //}
         [Fact]
         public void WhenGetAllMeasurementsThenGetExpectedMeasurements()
         {

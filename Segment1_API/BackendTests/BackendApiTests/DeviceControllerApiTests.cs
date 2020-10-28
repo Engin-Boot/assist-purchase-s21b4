@@ -10,14 +10,14 @@ namespace BackendTests.BackendApiTests
 {
     public class DeviceControllerApiTests
     {
-        private readonly ITestOutputHelper output;
+        private readonly ITestOutputHelper _output;
         private readonly MockServer _mockServer;
         private static readonly string _url = "http://localhost:5000/api/devices";
 
         public DeviceControllerApiTests(ITestOutputHelper output)
         {
             _mockServer = new MockServer();
-            this.output = output;
+            this._output = output;
         }
        
         [Fact]
@@ -26,7 +26,7 @@ namespace BackendTests.BackendApiTests
             var response = await _mockServer.Client.GetAsync(_url);
             var jsonString = await response.Content.ReadAsStringAsync();
             List<DataModels.DeviceModel> devices = JsonConvert.DeserializeObject<List<DataModels.DeviceModel>>(jsonString);
-            output.WriteLine(devices.Count.ToString());
+            _output.WriteLine(devices.Count.ToString());
             //Assert.True(devices.Count == 7);
             Assert.Contains("VUEMX500", devices[0].id);
 

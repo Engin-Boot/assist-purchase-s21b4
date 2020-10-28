@@ -1,0 +1,35 @@
+name: Resharper_Code_Analysis_Segment2
+ 
+on: 
+    push:
+        branches: [ main ]
+ 
+jobs:
+  resharper:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+           dotnet-version: 3.1.101
+          
+      - name: Install resharper
+        run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
+        
+      - name: Add package
+        run: dotnet add Segment2_GUI/UI_Customer.Tests/UI_Customer.Tests.csproj package xunit --version 2.4.0
+
+      - name: Add package
+        run: dotnet add Segment2_GUI/Employee_App.Tests/Employee_App.Tests.csproj package xunit --version 2.4.0
+        
+      - name: Run resharper inspection
+        run: jb inspectcode Segment2_GUI/assistPurchaseGui.sln /output=insreport_segment2.xml
+       
+      - name: Run resharper duplicate code check
+        run: jb dupfinder Segment2_GUI/assistPurchaseGui.sln /output=dupreport_segment2.xml
+            
+      - name: Check Reports
+        run: powershell ./Segment1_API/resharper.ps1
