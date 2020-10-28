@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "S/v8wGHdh5mjBp1lj8+uC2Y9K0XYq/vTTOuLc/o/F12fYxOXXeA29NrfRBKumoeKT3ynQL5SgRh7bDvj8pN8wQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MEITY\\assist-purchase-s21b4\\Segment1_API\\DataModels\\DataModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MEITY\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MEITY\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
