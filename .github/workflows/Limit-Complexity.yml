@@ -1,4 +1,4 @@
-name: Limit_complexity_Segment1
+name: Limit_complexity
 
 on:
   push:

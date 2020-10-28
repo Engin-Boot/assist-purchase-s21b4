@@ -1,7 +1,6 @@
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\bin\Debug\UI-Customer.exe.config
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\bin\Debug\UI-Customer.exe
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\bin\Debug\UI-Customer.pdb
-C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\UI-Customer.csprojAssemblyReference.cache
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\MainWindow.g.cs
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\Views\ShowingDevices.g.cs
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\Views\TakingCustomerDetails.g.cs
@@ -21,3 +20,4 @@ C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Deb
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\UI-Customer.csproj.CoreCompileInputs.cache
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\UI-Customer.exe
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\UI-Customer.pdb
+C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\UI-Customer\obj\Debug\UI-Customer.csprojAssemblyReference.cache

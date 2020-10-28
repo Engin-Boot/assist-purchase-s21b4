@@ -21,9 +21,9 @@ namespace UI_Customer.PreferenceModel
         }
         public static void autoCheckMeasurements(DataModels.FilterDataModel filters)
         {
-            ShowingDevices _devicesobj = new ShowingDevices();
+            //ShowingDevices _devicesobj = new ShowingDevices();
 
-            foreach (CheckBox cb in _devicesobj.filter1Stack.Children)
+            foreach (CheckBox cb in ShowingDevices.AppWindow.filter1Stack.Children)
             {
                 foreach (var measurement in filters.measurements)
                 {
@@ -38,8 +38,8 @@ namespace UI_Customer.PreferenceModel
         }
         public static void autoCheckWeight(DataModels.FilterDataModel filters)
         {
-            ShowingDevices _devicesobj = new ShowingDevices();
-            foreach (CheckBox cb in _devicesobj.filter2Stack.Children)
+            //ShowingDevices _devicesobj = new ShowingDevices();
+            foreach (CheckBox cb in ShowingDevices.AppWindow.filter2Stack.Children)
             {
                 foreach (var weight in filters.weight)
                 {
@@ -54,8 +54,8 @@ namespace UI_Customer.PreferenceModel
         }
         public static void autoCheckResolution(DataModels.FilterDataModel filters)
         {
-            ShowingDevices _devicesobj = new ShowingDevices();
-            foreach (CheckBox cb in _devicesobj.filter3Stack.Children)
+            //ShowingDevices _devicesobj = new ShowingDevices();
+            foreach (CheckBox cb in ShowingDevices.AppWindow.filter3Stack.Children)
             {
                 foreach (var resolution in filters.resolution)
                 {
@@ -70,8 +70,8 @@ namespace UI_Customer.PreferenceModel
         }
         public static void autoCheckBatteryCapacity(DataModels.FilterDataModel filters)
         {
-            ShowingDevices _devicesobj = new ShowingDevices();
-            foreach (CheckBox cb in _devicesobj.filter4Stack.Children)
+            //ShowingDevices _devicesobj = new ShowingDevices();
+            foreach (CheckBox cb in ShowingDevices.AppWindow.filter4Stack.Children)
             {
                 foreach (var fil in filters.batterycapacity)
                 {

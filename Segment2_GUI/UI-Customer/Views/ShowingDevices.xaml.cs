@@ -30,9 +30,11 @@ namespace UI_Customer.Views
         DataModels.DeviceModel[] PassedToStack2_weightsStack = ServerConnection.Devices.getAllDevices();
         DataModels.DeviceModel[] PassedToStack3_resolutionStack = ServerConnection.Devices.getAllDevices();
         DataModels.DeviceModel[] PassedToStack4_batteryCapacityStack = ServerConnection.Devices.getAllDevices();
+        public static ShowingDevices AppWindow;
         public ShowingDevices()
         {
             InitializeComponent();
+            AppWindow = this;
             DataModels.DeviceModel[] ListOfDevices = ServerConnection.Devices.getAllDevices();
             if (ListOfDevices.Length == 0)
             {
