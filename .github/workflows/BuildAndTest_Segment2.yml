@@ -15,11 +15,16 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup .NET Core
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.100
+        dotnet-version: 3.1.101
     - name: Build with dotnet
       run: dotnet build Segment2_GUI\assistPurchaseGui.sln --configuration Release
     
