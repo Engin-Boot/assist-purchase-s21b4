@@ -1,6 +1,7 @@
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\bin\Debug\Employee-App.exe.config
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\bin\Debug\Employee-App.exe
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\bin\Debug\Employee-App.pdb
+C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\obj\Debug\Employee-App.csprojAssemblyReference.cache
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\obj\Debug\MainWindow.g.cs
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\obj\Debug\App.g.cs
 C:\Users\Ajinkya\git repo\assist-purchase-s21b4\Segment2_GUI\Employee-App\obj\Debug\Employee-App_MarkupCompile.cache
