@@ -39,33 +39,42 @@ namespace Employee_App
                 DeviceOperationStack.Visibility = Visibility.Collapsed;
             }
             DataModels.DeviceModel[] d1 = ServerConnection.Devices.getAllDevices();
-            StackPanel innerStack = new StackPanel
+            if (d1.Length == 0)
             {
-                Orientation = Orientation.Vertical
-
-            };
-
-            foreach (var c in d1)
-            {
-                TextBlock cb = new TextBlock();
-                cb.Margin = new Thickness(10);
-                string s = "ID :    " + c.id + "\n" + "NAME :    " + c.name + "\n" + "OVERVIEW :    " + c.overview + "\n" +
-                    "MEASUREMENTS :    " + string.Join(",", c.measurements) + "\n" + "WEIGHT :    " + c.weight + "\n" + "BATTERY :    "
-                    + c.batterycapacity + "\n" + "RESOLUTION :    " + c.resolution;
-                cb.Text = s;
-                Border b = new Border();
-                b.BorderBrush = new SolidColorBrush(Colors.Black);
-                b.BorderThickness = new Thickness(4);
-                b.Margin = new Thickness(10);
-                b.Background = new SolidColorBrush(Colors.LightBlue);
-                b.Child = cb;
-
-                innerStack.Children.Add(b);
+                MessageBox.Show("Devices not found!");
+                Window win = new Window();
+                win.Close();
 
             }
-            DevicesStack.Children.Clear();
-            DevicesStack.Children.Add(innerStack);
+            else
+            {
+                StackPanel innerStack = new StackPanel
+                {
+                    Orientation = Orientation.Vertical
 
+                };
+
+                foreach (var c in d1)
+                {
+                    TextBlock cb = new TextBlock();
+                    cb.Margin = new Thickness(10);
+                    string s = "ID :    " + c.id + "\n" + "NAME :    " + c.name + "\n" + "OVERVIEW :    " + c.overview + "\n" +
+                        "MEASUREMENTS :    " + string.Join(",", c.measurements) + "\n" + "WEIGHT :    " + c.weight + "\n" + "BATTERY :    "
+                        + c.batterycapacity + "\n" + "RESOLUTION :    " + c.resolution;
+                    cb.Text = s;
+                    Border b = new Border();
+                    b.BorderBrush = new SolidColorBrush(Colors.Black);
+                    b.BorderThickness = new Thickness(4);
+                    b.Margin = new Thickness(10);
+                    b.Background = new SolidColorBrush(Colors.LightBlue);
+                    b.Child = cb;
+
+                    innerStack.Children.Add(b);
+
+                }
+                DevicesStack.Children.Clear();
+                DevicesStack.Children.Add(innerStack);
+            }
         }
         DataModels.DummyDeviceModel DummyDevice = new DataModels.DummyDeviceModel();
         private void Button_Click_search(object sender, RoutedEventArgs e)
@@ -172,7 +181,7 @@ namespace Employee_App
                 DeviceOperationStack.Visibility = Visibility.Collapsed;
             }
             DataModels.CustomerModel[] d1 = ServerConnection.Customers.getAllCustomers();
-            if (d1 == null)
+            if (d1.Length == 0)
             {
                 MessageBox.Show("No Customers At the Moment");
             }

@@ -41,6 +41,7 @@ namespace UI_Customer.Views
                 MessageBox.Show("Devices not found!");
                 Window win = new Window();
                 win.Close();
+                
             }
             else
             {
@@ -108,6 +109,13 @@ namespace UI_Customer.Views
             filter4Stack.Children.Clear();
             DevicesStack.Children.Clear();
             DataModels.DeviceModel[] ListOfDevices = ServerConnection.Devices.getAllDevices();
+            if (ListOfDevices.Length == 0)
+            {
+                MessageBox.Show("Devices not found!");
+                Window win = new Window();
+                win.Close();
+
+            }
             AddDevicesToDeviceStackPanel(ListOfDevices);
             initialMeasurementsTOShow = ServerConnection.Filters.getMeasurementsInAllDevices();
             addInitialMeasuremntstoMeasurementStack();
@@ -116,7 +124,7 @@ namespace UI_Customer.Views
             {
                 if (initialMeasurementsTOShow.Count > 0)
                 {
-                    TextBlock t = new TextBlock { Text = "Select Measurement" };
+                    TextBlock t = new TextBlock { Text = "Select Measurement " };
                     filter1StackLabel.Children.Add(t);
 
                     foreach (var measure in initialMeasurementsTOShow)
@@ -174,7 +182,7 @@ namespace UI_Customer.Views
                 selectedRanges = GetRangesToBeSelected(UpdatedListOfDevices);
                 Comparor comparorObj = new Comparor();
                 selectedRanges.Sort(comparorObj);
-                TextBlock FilterLabel = new TextBlock { Text = "Select Weight range" };
+                TextBlock FilterLabel = new TextBlock { Text = "  Select Weight range   " };
                 filter2StackLabel.Children.Add(FilterLabel);
                 foreach (var range in selectedRanges)
                 {
@@ -243,7 +251,7 @@ namespace UI_Customer.Views
             if (UpdatedListOfDevices.Length > 0)
             {
                 PassedToStack3_resolutionStack = UpdatedListOfDevices;
-                TextBlock FilterLabel = new TextBlock { Text = "Select Resolution" };
+                TextBlock FilterLabel = new TextBlock { Text = "  Select Resolution   " };
                 filter3StackLabel.Children.Add(FilterLabel);
 
                 //Build the item list
@@ -291,7 +299,7 @@ namespace UI_Customer.Views
             if (UpdatedListOfDevices.Length > 0)
             {
                 PassedToStack4_batteryCapacityStack = UpdatedListOfDevices;
-                TextBlock FilterLabel = new TextBlock { Text = "Select Battery Capacity" };
+                TextBlock FilterLabel = new TextBlock { Text = "  Select Battery Capacity  " };
                 filter4StackLabel.Children.Add(FilterLabel);
 
                 //Build the item list

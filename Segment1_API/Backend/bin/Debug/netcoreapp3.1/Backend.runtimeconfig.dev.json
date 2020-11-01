@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\MEITY\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\MEITY\\.nuget\\packages"
+    ]
+  }
+}
