@@ -6,16 +6,16 @@ namespace DataModels
 {
     public class FilterDataModel
     {
-        public List<string> measurements { get; set; }
-        public List<string> weight { get; set; }
-        public List<string> batterycapacity { get; set; }
-        public List<string> resolution { get; set; }
+        public List<string> Measurements { get; set; }
+        public List<string> Weight { get; set; }
+        public List<string> Batterycapacity { get; set; }
+        public List<string> Resolution { get; set; }
         public FilterDataModel()
         {
-            measurements = new List<string>();
-            weight = new List<string>();
-            batterycapacity = new List<string>();
-            resolution = new List<string>();
+            Measurements = new List<string>();
+            Weight = new List<string>();
+            Batterycapacity = new List<string>();
+            Resolution = new List<string>();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Backend.Repository
         public DataModels.DeviceModel GetDevice(string id)
         {
             var deviceDb = _csvHandler.ReadFile(_csvFilePath);
-            return deviceDb.Find(device => device.id.Equals(id));
+            return deviceDb.Find(device => device.Id.Equals(id));
         }
         public bool AddNewDevice(DataModels.DeviceModel device)
         {
@@ -35,9 +35,9 @@ namespace Backend.Repository
             var deviceDb = _csvHandler.ReadFile(_csvFilePath);
             foreach (var tempDevice in deviceDb)
             {
-                if (tempDevice.id.Equals(id))
+                if (tempDevice.Id.Equals(id))
                 {
-                    updated = _csvHandler.DeleteFromFile(tempDevice.id, _csvFilePath);
+                    updated = _csvHandler.DeleteFromFile(tempDevice.Id, _csvFilePath);
                     updated &= _csvHandler.WriteToFile(device, _csvFilePath);
                 }
             }

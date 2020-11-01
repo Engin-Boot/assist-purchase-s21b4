@@ -80,10 +80,10 @@ namespace Backend.Utility
                // csvFormatData += "\n";
                 csvFormatData += string.Join(',', new object[]{
                     ip,
-                    string.Join(' ', fil.measurements),
-                    string.Join(' ', fil.weight),
-                    string.Join(' ', fil.resolution),
-                    string.Join(' ', fil.batterycapacity)
+                    string.Join(' ', fil.Measurements),
+                    string.Join(' ', fil.Weight),
+                    string.Join(' ', fil.Resolution),
+                    string.Join(' ', fil.Batterycapacity)
 
 
                     });
@@ -120,21 +120,21 @@ namespace Backend.Utility
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                
-                    var values = line.Split(',');
-                    if(ip.Equals(values[0]))
-                    {
-                       filterPreference = FormatStringToDeviceObject(values);
-                        return filterPreference;
-                    }
-                    
-                
-
-
+                if(line!=null)
+                {
+                    SaveFilterPreferenceForIpIfFoundForIp(line, ip,ref filterPreference);
+                }
             }
             return filterPreference;
         }
-        
+        private void SaveFilterPreferenceForIpIfFoundForIp(string line,string ip,ref DataModels.FilterDataModel filterPreference)
+        {
+            var values = line.Split(',');
+            if (ip.Equals(values[0]))
+            {
+                filterPreference = FormatStringToDeviceObject(values);
+            }
+        }
         private DataModels.FilterDataModel FormatStringToDeviceObject(string[] values)
         {
             
@@ -143,12 +143,12 @@ namespace Backend.Utility
             {
 
 
-                measurements = values[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
+                Measurements = values[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
 
-                weight = values[2].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
-                resolution = values[3].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
+                Weight = values[2].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
+                Resolution = values[3].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(),
                 
-                batterycapacity = values[4].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList()
+                Batterycapacity = values[4].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList()
 
             };
             //Console.WriteLine(filpre.batterycapacity.Count);

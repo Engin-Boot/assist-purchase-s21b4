@@ -118,16 +118,16 @@ namespace Backend.Utility
             string csvFormatData = null;
             try
             {
-                if (device.id != null)
+                if (device.Id != null)
                 {
                     csvFormatData = string.Join(',', new object[]{
-                    device.id,
-                    device.name,
-                    device.overview,
-                    string.Join(' ',device.measurements),
-                    device.weight.ToString(CultureInfo.CurrentCulture),
-                    device.batterycapacity,
-                    device.resolution,
+                    device.Id,
+                    device.Name,
+                    device.Overview,
+                    string.Join(' ',device.Measurements),
+                    device.Weight.ToString(CultureInfo.CurrentCulture),
+                    device.Batterycapacity,
+                    device.Resolution,
                     });
                 }
 
@@ -146,13 +146,13 @@ namespace Backend.Utility
             DeviceModel device = new DeviceModel
             {
 
-                id = values[0],
-                name = values[1],
-                overview = values[2],
-                measurements = values[3].Split(' ').ToList(),
-                weight = float.Parse(values[4]),
-                batterycapacity = values[5],
-                resolution = values[6],
+                Id = values[0],
+                Name = values[1],
+                Overview = values[2],
+                Measurements = values[3].Split(' ').ToList(),
+                Weight = float.Parse(values[4]),
+                Batterycapacity = values[5],
+                Resolution = values[6],
             };
             return device;
         }

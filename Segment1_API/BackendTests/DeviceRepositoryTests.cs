@@ -8,23 +8,23 @@ namespace BackendTests
     public class DeviceRepositoryTests
     {
         static readonly string filepath = @"D:\a\assist-purchase-s21b4\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices3.csv";
-        //static readonly string filepath = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\git exact copy\Segment1_API\BackendTests\TestDevices3.csv";
+        //static readonly string filepath = @"F:\philips pre-joining training\case study 2 part 2 AssistPurchase\git exact copy 2\assist-purchase-s21b4\Segment1_API\BackendTests\TestDevices3.csv";
         readonly DeviceRepository _deviceRepository = new DeviceRepository(filepath);
         readonly DataModels.DeviceModel _device = new DataModels.DeviceModel
         {
-            name = "IntelliVue MX300",
-            id = "VUEMX300",
-            batterycapacity = "7",
-            measurements = new List<string> { "ECG", "SPO2" },
-            overview = "Something",
-            resolution = "1090 x 1020",
-            weight = 1.2f
+            Name = "IntelliVue MX300",
+            Id = "VUEMX300",
+            Batterycapacity = "7",
+            Measurements = new List<string> { "ECG", "SPO2" },
+            Overview = "Something",
+            Resolution = "1090 x 1020",
+            Weight = 1.2f
         };
         [Fact]
         public void TestExpectingListOfAllDevicesWhenCalled()
         {
             List<DataModels.DeviceModel> alldevices = _deviceRepository.GetAllDevices();
-            Assert.Equal("IntelliVue MX750", alldevices[0].name);
+            Assert.Equal("IntelliVue MX750", alldevices[0].Name);
         }
         [Fact]
         public void TestExpectingEmptyListWhenFileDoesNotExist()
@@ -38,7 +38,7 @@ namespace BackendTests
         public void TestExpectingADeviceWhenCalledWithStringId()
         {
             DataModels.DeviceModel tempDevice = _deviceRepository.GetDevice("VUEMX750");
-            Assert.Equal("IntelliVue MX750", tempDevice.name);
+            Assert.Equal("IntelliVue MX750", tempDevice.Name);
         }
         [Fact]
         public void TestExpectingNullWhenDeviceDoesNotExistInFile()
@@ -52,8 +52,8 @@ namespace BackendTests
         {
             _deviceRepository.AddNewDevice(_device);
             List<DataModels.DeviceModel> devices = _deviceRepository.GetAllDevices();
-            Assert.Equal("IntelliVue MX300", devices[^1].name);
-            _deviceRepository.DeleteDevice(_device.id);
+            Assert.Equal("IntelliVue MX300", devices[^1].Name);
+            _deviceRepository.DeleteDevice(_device.Id);
 
         }
 
@@ -74,8 +74,8 @@ namespace BackendTests
         {
             
             _deviceRepository.AddNewDevice(_device);
-            Assert.True(_deviceRepository.DeleteDevice(_device.id));
-            Assert.Null(_deviceRepository.GetDevice(_device.id));
+            Assert.True(_deviceRepository.DeleteDevice(_device.Id));
+            Assert.Null(_deviceRepository.GetDevice(_device.Id));
         }
         [Fact]
         public void TestExpectingFalseWhenDeviceToBeRemovedDoesNotExistInFile()
@@ -94,9 +94,9 @@ namespace BackendTests
         {
             DataModels.DeviceModel tempDevice = _deviceRepository.GetDevice("VUEX3");
 
-            tempDevice.batterycapacity = "10";
+            tempDevice.Batterycapacity = "10";
             _deviceRepository.UpdateDevice("VUEX3",tempDevice);
-            Assert.Equal("10", _deviceRepository.GetDevice("VUEX3").batterycapacity);
+            Assert.Equal("10", _deviceRepository.GetDevice("VUEX3").Batterycapacity);
         }
         [Fact]
         public void TestExpectingFalseWhenDeviceToBeUpdatedDoesNotExist()

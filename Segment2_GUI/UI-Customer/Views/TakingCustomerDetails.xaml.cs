@@ -48,7 +48,7 @@ namespace UI_Customer.Views
             }
             else
             {
-                MessageBox.Show("Please fill all the Details");
+                MessageBox.Show("Please fill all the Details", "Instructions");
             }
 
         }

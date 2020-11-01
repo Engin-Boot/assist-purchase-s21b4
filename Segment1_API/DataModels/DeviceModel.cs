@@ -4,16 +4,16 @@ namespace DataModels
 {
     public class DeviceModel
     {
-        public string id { get; set; }
-        public string overview { get; set; }
-        public string name { get; set; }
-        public List<string> measurements { get; set; }
-        public float weight { get; set; }
-        public string batterycapacity {get; set;}
-        public string resolution { get; set; }
+        public string Id { get; set; }
+        public string Overview { get; set; }
+        public string Name { get; set; }
+        public List<string> Measurements { get; set; }
+        public float Weight { get; set; }
+        public string Batterycapacity {get; set;}
+        public string Resolution { get; set; }
         public DeviceModel()
         {
-            measurements = new List<string>();
+            Measurements = new List<string>();
         }
         
     }

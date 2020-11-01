@@ -23,7 +23,7 @@ namespace Backend.Repository
             List<string> measurementNames = new List<string>();
             foreach (var device in deviceDb)
             {
-                foreach (var measurement in device.measurements)
+                foreach (var measurement in device.Measurements)
                 {
                     if (!measurementNames.Contains(measurement))
                     {
@@ -35,17 +35,17 @@ namespace Backend.Repository
         }
         public List<DeviceModel> ApplyAllFilters(FilterDataModel filters)
         {
-            var filter1 = ApplyMeasurementsFilter(filters.measurements, _filteredDevices);
-            var filter2 = ApplyWeightFilter(filters.weight, filter1);
-            var filter3 = ApplyResolutionFilter(filters.resolution, filter2);
-            var filter4 = ApplyBatteryCapacityFilter(filters.batterycapacity, filter3);
+            var filter1 = ApplyMeasurementsFilter(filters.Measurements, _filteredDevices);
+            var filter2 = ApplyWeightFilter(filters.Weight, filter1);
+            var filter3 = ApplyResolutionFilter(filters.Resolution, filter2);
+            var filter4 = ApplyBatteryCapacityFilter(filters.Batterycapacity, filter3);
             return filter4;
         }
         private List<DeviceModel> ApplyMeasurementsFilter(List<string> expectedMeasurements,List<DeviceModel> devices)
         {
             if(expectedMeasurements.Count>0)
             {
-                return devices.FindAll(device => ContainsAllMeasurement(device.measurements,expectedMeasurements));
+                return devices.FindAll(device => ContainsAllMeasurement(device.Measurements,expectedMeasurements));
             }
             else
             {
@@ -67,7 +67,7 @@ namespace Backend.Repository
         {
             if (expectedWeight.Count > 0)
             {
-                return devices.FindAll(device => weight_in(device.weight,expectedWeight));                
+                return devices.FindAll(device => weight_in(device.Weight,expectedWeight));                
             }
             else
             {
@@ -91,7 +91,7 @@ namespace Backend.Repository
         {
             if(expectedResolution.Count > 0)
             {
-                return devices.FindAll(device => resolution_equals(device.resolution,expectedResolution));
+                return devices.FindAll(device => resolution_equals(device.Resolution,expectedResolution));
             }
             else
             {               
@@ -114,7 +114,7 @@ namespace Backend.Repository
         {
             if (expectedBattery.Count > 0)
             {
-                return devices.FindAll(device => battery_equals(device.batterycapacity, expectedBattery));
+                return devices.FindAll(device => battery_equals(device.Batterycapacity, expectedBattery));
             }
             else
             {

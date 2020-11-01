@@ -91,6 +91,7 @@ namespace UI_Customer.Views
         {
             TakingCustomerDetails _addingDetails = new TakingCustomerDetails(id);
             Window win = new Window();
+            win.Title = "CustomerDetails";
             win.Content = _addingDetails;
             win.Show();
         }

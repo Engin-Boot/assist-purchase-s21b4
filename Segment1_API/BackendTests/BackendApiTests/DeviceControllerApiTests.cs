@@ -28,7 +28,7 @@ namespace BackendTests.BackendApiTests
             List<DataModels.DeviceModel> devices = JsonConvert.DeserializeObject<List<DataModels.DeviceModel>>(jsonString);
             _output.WriteLine(devices.Count.ToString());
             //Assert.True(devices.Count == 7);
-            Assert.Contains("VUEMX500", devices[0].id);
+            Assert.Contains("VUEMX500", devices[0].Id);
 
         }
 
@@ -53,13 +53,13 @@ namespace BackendTests.BackendApiTests
         {
             var device = new DataModels.DeviceModel()
             {
-                id = "VUEMX300",
-                name = "IntelliVue MX300",
-                measurements = new List<string> { "ECG" },
-                resolution = "190 x 1080",
-                overview = "some_random_overview",
-                weight = 1.6f,
-                batterycapacity = "11"
+                Id = "VUEMX300",
+                Name = "IntelliVue MX300",
+                Measurements = new List<string> { "ECG" },
+                Resolution = "1090x1080",
+                Overview = "some_random_overview",
+                Weight = 1.6f,
+                Batterycapacity = "11"
 
             };
             //ReSharper disable all
@@ -83,13 +83,13 @@ namespace BackendTests.BackendApiTests
         {
             var newDevice = new DataModels.DeviceModel()
             {
-                name = "IntelliVue MX300",
-                id = "VUEMX300",
-                batterycapacity = "11",
-                measurements = new List<string> { "ECG" },
-                overview = "Something",
-                resolution = "1090 x 1020",
-                weight = 1.2f,
+                Name = "IntelliVue MX300",
+                Id = "VUEMX300",
+                Batterycapacity = "11",
+                Measurements = new List<string> { "ECG" },
+                Overview = "Something",
+                Resolution = "1090x1020",
+                Weight = 1.2f,
             };
             //ReSharper disable all
             var response = await _mockServer.Client.PostAsync(_url , new StringContent(JsonConvert.SerializeObject(newDevice), Encoding.UTF8, "application/json")); //ReSharper restore all
@@ -102,13 +102,13 @@ namespace BackendTests.BackendApiTests
         {
             var updatedState = new DataModels.DeviceModel()
             {
-                name = "IntelliVue X3",
-                id = "VUEX3",
-                batterycapacity = "11",
-                measurements = new List<string> { "ECG", "SPO2", "Respiration" },
-                overview = "The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.",
-                resolution = "1024 x 420",
-                weight = 1.7f,
+                Name = "IntelliVue X3",
+                Id = "VUEX3",
+                Batterycapacity = "11",
+                Measurements = new List<string> { "ECG", "SPO2", "Respiration" },
+                Overview = "The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.",
+                Resolution = "1024x420",
+                Weight = 1.7f,
             };  //ReSharper disable all
             var response = await _mockServer.Client.PutAsync(_url + "/VUEX3", new StringContent(JsonConvert.SerializeObject(updatedState), Encoding.UTF8, "application/json")); //ReSharper restore all
             Assert.True(response.StatusCode == HttpStatusCode.OK);
@@ -119,13 +119,13 @@ namespace BackendTests.BackendApiTests
         {
             var updatedstate = new DataModels.DeviceModel()
             {
-                name = "IntelliVue X777",
-                id = "VUEX777",
-                batterycapacity = "7",
-                measurements = new List<string> { "ECG", "SPO2", "Respiration" },
-                overview = "The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.",
-                resolution = "1024 x 420",
-                weight = 1.9f,
+                Name = "IntelliVue X777",
+                Id = "VUEX777",
+                Batterycapacity = "7",
+                Measurements = new List<string> { "ECG", "SPO2", "Respiration" },
+                Overview = "The IntelliVue X3 combines powerful monitoring with flexible portability in one compact unit. Supplying comprehensive patient information at a glance it can make a real difference when multiple patients and priorities need attention.",
+                Resolution = "1024x420",
+                Weight = 1.9f,
             }; 
             //ReSharper disable all
             var response = await _mockServer.Client.PutAsync(_url + "/VUEX777", new StringContent(JsonConvert.SerializeObject(updatedstate), Encoding.UTF8, "application/json"));
